@@ -1,780 +1,821 @@
->       42
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/born2beroot_42/born2beroot.md.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="none">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="nord">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #ffffff; background-color: #2e333f; }
+body { font-family: monospace; color: #ffffff; background-color: #2e333f; }
+* { font-size: 1.1em; }
+.notesBold { color: #ffd75f; }
+.notesH1 { color: #5fffaf; font-size: 120%; }
+.notesListMarker { color: #87ffaf; }
+.notesBlockquote { color: #afafff; }
+.notesDelimiter { color: #444444; }
+.notesCode { color: #afd7af; }
+.notesUrl { color: #ff5faf; text-decoration: underline; font-size: 90%; }
+.notesItalic { color: #ffffd7; }
+.notesTaskTag { color: #87afd7; }
+a { color: hotpink; }
+-->
+</style>
 
-#       Born2Reboot
+<script type='text/javascript'>
+<!--
 
-#INDEX
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="notesBlockquote">&gt; </span> cvidon@student.42.fr
+
+<span class="notesH1">#       Born2Reboot</span>
+
+<span class="notesH1">#INDEX</span>
 ------
-##  Help
-##  Post-it
-##  Roadmap
-###     VM
-###     Install
-###     Partitioning
-###     Comfort
-###     Sudoers
-###     UFW (Uncomplicated Firewall)
-###     SSH Daemon
-###     SSH Connection
-###     Password Policy
-###     Update Passwords
-###     Groups and Users
-###     Crontab Monitoring
-##  LLMP
-###     Lighttpd
-###     MariaDB
-###     PHP
-###     WP
-###     IPFS
+<span class="notesH1">##  Help</span>
+<span class="notesH1">##  Post-it</span>
+<span class="notesH1">##  Roadmap</span>
+<span class="notesH1">###     VM</span>
+<span class="notesH1">###     Install</span>
+<span class="notesH1">###     Partitioning</span>
+<span class="notesH1">###     Comfort</span>
+<span class="notesH1">###     Sudoers</span>
+<span class="notesH1">###     UFW (Uncomplicated Firewall)</span>
+<span class="notesH1">###     SSH Daemon</span>
+<span class="notesH1">###     SSH Connection</span>
+<span class="notesH1">###     Password Policy</span>
+<span class="notesH1">###     Update Passwords</span>
+<span class="notesH1">###     Groups and Users</span>
+<span class="notesH1">###     Crontab Monitoring</span>
+<span class="notesH1">##  LLMP</span>
+<span class="notesH1">###     Lighttpd</span>
+<span class="notesH1">###     MariaDB</span>
+<span class="notesH1">###     PHP</span>
+<span class="notesH1">###     WP</span>
+<span class="notesH1">###     IPFS</span>
 
-##  Help
-->`Select/Click -able`
-> **definition**
-> precision.
-<variable_placeholder>
-`$ user command`
-`# root command`
-`> plain text`
-https://www.external_link
+<span class="notesH1">##  Help</span>
 
-##  Post-it
+-&gt;<span class="notesDelimiter">`</span><span class="notesCode">Select/Click -able</span><span class="notesDelimiter">`</span>
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">definition</span><span class="notesDelimiter">**</span>
+<span class="notesBlockquote">&gt; </span>precision.
+&lt;variable_placeholder&gt;
+<span class="notesDelimiter">`</span><span class="notesCode">$ user command</span><span class="notesDelimiter">`</span>
+<span class="notesDelimiter">`</span><span class="notesCode"># root command</span><span class="notesDelimiter">`</span>
+<span class="notesDelimiter">`</span><span class="notesCode">&gt; plain text</span><span class="notesDelimiter">`</span>
+<span class="notesUrl"><a href="https://www.external_link">https://www.external_link</a></span>
 
-* Services:
+<span class="notesH1">##  Post-it</span>
+
+<span class="notesListMarker">*</span> Services:
 
 List services:
-    # service --status-all
+<span class="notesCode">    # service --status-all</span>
 List running services:
-    # systemctl status
+<span class="notesCode">    # systemctl status</span>
 List all services status:
-    # systemctl
+<span class="notesCode">    # systemctl</span>
 
-* Networking:
+<span class="notesListMarker">*</span> Networking:
 
 List currently used ports:
-    $ ss -tunlp
-Find which services use <port>:
-    $ ss -tulp
+<span class="notesCode">    $ ss -tunlp</span>
+Find which services use &lt;port&gt;:
+<span class="notesCode">    $ ss -tulp</span>
 List of ports and their default usage:
-    $ vi /etc/services
+<span class="notesCode">    $ vi /etc/services</span>
 
-* Errors:
+<span class="notesListMarker">*</span> Errors:
 
-Fix the startup error `*ERROR* Failed to send host log message.`:
-    # /etc/default/grub
-    > GRUB_CMDLINE_LINUX_DEFAULT="quiet nomodeset"
-    # update-grub
+Fix the startup error <span class="notesDelimiter">`</span><span class="notesCode">*ERROR* Failed to send host log message.</span><span class="notesDelimiter">`</span>:
+<span class="notesCode">    # /etc/default/grub</span>
+<span class="notesCode">    &gt; GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet nomodeset&quot;</span>
+<span class="notesCode">    # update-grub</span>
 
-* Misc:
+<span class="notesListMarker">*</span> Misc:
 
 Display who is logged in and what they are doing:
-    $ w
+<span class="notesCode">    $ w</span>
 
 Check updates:
-    $ apt update
-    $ apt upgrade
-    $ apt dist-upgrade
-    $ apt autoremove
+<span class="notesCode">    $ apt update</span>
+<span class="notesCode">    $ apt upgrade</span>
+<span class="notesCode">    $ apt dist-upgrade</span>
+<span class="notesCode">    $ apt autoremove</span>
 
 Cycle ttys:
-    Alt + Left/Right
-    Ctrl + Alt + <f1_to_f6>
+<span class="notesCode">    Alt + Left/Right</span>
+<span class="notesCode">    Ctrl + Alt + &lt;f1_to_f6&gt;</span>
 
 Changes the hostname:
-    # hostnamectl set-hostname <new_name>
+<span class="notesCode">    # hostnamectl set-hostname &lt;new_name&gt;</span>
 Edit '/etc/hosts':
-    # vi /etc/hosts
-    > 127.0.0.1   localhost
-    > 127.0.0.1   <new_name>
-    # reboot
+<span class="notesCode">    # vi /etc/hosts</span>
+<span class="notesCode">    &gt; 127.0.0.1   localhost</span>
+<span class="notesCode">    &gt; 127.0.0.1   &lt;new_name&gt;</span>
+<span class="notesCode">    # reboot</span>
 Check the current hostname:
-    $ hostnamectl
+<span class="notesCode">    $ hostnamectl</span>
 
-##  Roadmap
+<span class="notesH1">##  Roadmap</span>
 
-###     VM
+<span class="notesH1">###     VM</span>
 
 Download VirtualBox
 Download Debian latest stable release:
-https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/
+<span class="notesUrl"><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/">https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/</a></span>
 
- VirtualBox ->`New`
- Name: `debian-server`
- Machine Folder: `somewhere`
- Version: `Debian (64-bit)`
- ->`Continue`
-    1024 MB
- ->`Continue`
-    8 GB
-    VDI (VirtualBox Disk Image)
-    Dynamically allocated
- ->`Create`
+ VirtualBox -&gt;<span class="notesDelimiter">`</span><span class="notesCode">New</span><span class="notesDelimiter">`</span>
+ Name: <span class="notesDelimiter">`</span><span class="notesCode">debian-server</span><span class="notesDelimiter">`</span>
+ Machine Folder: <span class="notesDelimiter">`</span><span class="notesCode">somewhere</span><span class="notesDelimiter">`</span>
+ Version: <span class="notesDelimiter">`</span><span class="notesCode">Debian (64-bit)</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Continue</span><span class="notesDelimiter">`</span>
+<span class="notesCode">    1024 MB</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Continue</span><span class="notesDelimiter">`</span>
+<span class="notesCode">    8 GB</span>
+<span class="notesCode">    VDI (VirtualBox Disk Image)</span>
+<span class="notesCode">    Dynamically allocated</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create</span><span class="notesDelimiter">`</span>
 
- VirtualBox ->`Settings` ->`Storage`
- `Controller: IDE` ->💿 `Empty`
- `Optical Drive:` ->💿
-    debian-11.1.0-amd64-netinst.iso
- ->`OK`
+ VirtualBox -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Storage</span><span class="notesDelimiter">`</span>
+ <span class="notesDelimiter">`</span><span class="notesCode">Controller: IDE</span><span class="notesDelimiter">`</span> -&gt;💿 <span class="notesDelimiter">`</span><span class="notesCode">Empty</span><span class="notesDelimiter">`</span>
+ <span class="notesDelimiter">`</span><span class="notesCode">Optical Drive:</span><span class="notesDelimiter">`</span> -&gt;💿
+<span class="notesCode">    debian-11.1.0-amd64-netinst.iso</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">OK</span><span class="notesDelimiter">`</span>
 
- VirtualBox ->`Start`
+ VirtualBox -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Start</span><span class="notesDelimiter">`</span>
 
 Be able to use CMD-TAB switch between host and VM windows:
- VirtualBox ->`Input` ->`Keyboard/Keyboard Settings`
- `Auto Capture Keyboard` `OFF`
+ VirtualBox -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Input</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Keyboard/Keyboard Settings</span><span class="notesDelimiter">`</span>
+ <span class="notesDelimiter">`</span><span class="notesCode">Auto Capture Keyboard</span><span class="notesDelimiter">`</span> <span class="notesDelimiter">`</span><span class="notesCode">OFF</span><span class="notesDelimiter">`</span>
 
 Screen size:
- VirtualBox ->`View` ->`Virtual Screen`: 200%
+ VirtualBox -&gt;<span class="notesDelimiter">`</span><span class="notesCode">View</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Virtual Screen</span><span class="notesDelimiter">`</span>: 200%
 
-###     Install
+<span class="notesH1">###     Install</span>
 
- ->`Install`
- Hostname: `cvidon42`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Install</span><span class="notesDelimiter">`</span>
+ Hostname: <span class="notesDelimiter">`</span><span class="notesCode">cvidon42</span><span class="notesDelimiter">`</span>
  Domain name:
- Root password: `toor`
- Full name for the new user: `clement`
- Username for your account: `cvidon`
- Choose a password for the new user: `resu`
- Select your time zone: `Central`
+ Root password: <span class="notesDelimiter">`</span><span class="notesCode">toor</span><span class="notesDelimiter">`</span>
+ Full name for the new user: <span class="notesDelimiter">`</span><span class="notesCode">clement</span><span class="notesDelimiter">`</span>
+ Username for your account: <span class="notesDelimiter">`</span><span class="notesCode">cvidon</span><span class="notesDelimiter">`</span>
+ Choose a password for the new user: <span class="notesDelimiter">`</span><span class="notesCode">resu</span><span class="notesDelimiter">`</span>
+ Select your time zone: <span class="notesDelimiter">`</span><span class="notesCode">Central</span><span class="notesDelimiter">`</span>
 
-###     Partitioning
+<span class="notesH1">###     Partitioning</span>
 
------[SIMPLE]-----
+-----[<span class="notesTaskTag">SIMPLE</span>]-----
 
- Partitioning method: `…encrypted LVM`
- Partitioning scheme: `Separate /home partition`
- Encryption passphrase: `ksid`
- Amount of volume group to use for guided partitioning: `max`
+ Partitioning method: <span class="notesDelimiter">`</span><span class="notesCode">…encrypted LVM</span><span class="notesDelimiter">`</span>
+ Partitioning scheme: <span class="notesDelimiter">`</span><span class="notesCode">Separate /home partition</span><span class="notesDelimiter">`</span>
+ Encryption passphrase: <span class="notesDelimiter">`</span><span class="notesCode">ksid</span><span class="notesDelimiter">`</span>
+ Amount of volume group to use for guided partitioning: <span class="notesDelimiter">`</span><span class="notesCode">max</span><span class="notesDelimiter">`</span>
  Finish partitioning:
- ->`#1` ->`4.0 GB` ->`ext4 /home`
- ->`#2` ->`3.0 GB` ->`ext4 /`
- ->`#3` ->`1.0 GB` ->`swap swap`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">4.0 GB</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">ext4 /home</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#2</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">3.0 GB</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">ext4 /</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#3</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">1.0 GB</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">swap swap</span><span class="notesDelimiter">`</span>
 
------[ADVANCED]------
+-----[<span class="notesTaskTag">ADVANCED</span>]------
 
-Partitioning method: `Manual`
- ->`SCSI1 (0,0,0) (sda) - 8.6 GB ATA VBOX HARDDISK`
+Partitioning method: <span class="notesDelimiter">`</span><span class="notesCode">Manual</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">SCSI1 (0,0,0) (sda) - 8.6 GB ATA VBOX HARDDISK</span><span class="notesDelimiter">`</span>
 
-Create `/boot` *primary partition*:
-> Bootable partition that it contains the operating system.
- ->`FREE SPACE` ->`Create a new partition`
- New partition size: `500M`
- ->`Primary` ->`Beginning`
- Mount point: `/boot`
- ->`Done setting up the partition`
+Create <span class="notesDelimiter">`</span><span class="notesCode">/boot</span><span class="notesDelimiter">`</span> <span class="notesDelimiter">*</span><span class="notesItalic">primary partition</span><span class="notesDelimiter">*</span>:
+<span class="notesBlockquote">&gt; </span>Bootable partition that it contains the operating system.
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">FREE SPACE</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create a new partition</span><span class="notesDelimiter">`</span>
+ New partition size: <span class="notesDelimiter">`</span><span class="notesCode">500M</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Primary</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Beginning</span><span class="notesDelimiter">`</span>
+ Mount point: <span class="notesDelimiter">`</span><span class="notesCode">/boot</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Done setting up the partition</span><span class="notesDelimiter">`</span>
 
-Set the rest as *logical partition* (LPAR):
-> Portion of a computer's hardware that is set aside and virtualised
-> as an additional computer.
- ->`FREE SPACE` ->`Create a new partition`
- New partition size: `max` ->`Logical` ->`Beginning`
- Mount point: `Do not mount it` ->`Done setting up the partition`
+Set the rest as <span class="notesDelimiter">*</span><span class="notesItalic">logical partition</span><span class="notesDelimiter">*</span> (LPAR):
+<span class="notesBlockquote">&gt; </span>Portion of a computer's hardware that is set aside and virtualised
+<span class="notesBlockquote">&gt; </span>as an additional computer.
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">FREE SPACE</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create a new partition</span><span class="notesDelimiter">`</span>
+ New partition size: <span class="notesDelimiter">`</span><span class="notesCode">max</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Logical</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Beginning</span><span class="notesDelimiter">`</span>
+ Mount point: <span class="notesDelimiter">`</span><span class="notesCode">Do not mount it</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Done setting up the partition</span><span class="notesDelimiter">`</span>
 
 Encrypt it:
- ->`Configure encrypted volumes` ->`Create encrypted volumes`
- -> 2nd partition (the bigger one) ->`Done setting up the partition`
- ->`Finish`
- Encryption passphrase: `ksid`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Configure encrypted volumes</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create encrypted volumes</span><span class="notesDelimiter">`</span>
+ -&gt; 2nd partition (the bigger one) -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Done setting up the partition</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Finish</span><span class="notesDelimiter">`</span>
+ Encryption passphrase: <span class="notesDelimiter">`</span><span class="notesCode">ksid</span><span class="notesDelimiter">`</span>
 
 Create the logical partitions:
- ->`Configure the Logical Volume Manager` ->`Create volume group`
- Volume group name: `LVMGroup`
- -> 1st partition (the bigger one) ->`Done setting up the partition`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Configure the Logical Volume Manager</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create volume group</span><span class="notesDelimiter">`</span>
+ Volume group name: <span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ -&gt; 1st partition (the bigger one) -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Done setting up the partition</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `root`
- Logical volume size: `2G`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">root</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">2G</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `swap`
- Logical volume size: `1024M`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">swap</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">1024M</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `home`
- Logical volume size: `1G`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">home</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">1G</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `var`
- Logical volume size: `1G`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">var</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">1G</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `srv`
- Logical volume size: `1G`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">srv</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">1G</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `tmp`
- Logical volume size: `1G`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">tmp</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">1G</span><span class="notesDelimiter">`</span>
 
- ->`Create logical volume` ->`LVMGroup`
- Logical volume name: `var-log`
- Logical volume size: `1056MG`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create logical volume</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">LVMGroup</span><span class="notesDelimiter">`</span>
+ Logical volume name: <span class="notesDelimiter">`</span><span class="notesCode">var-log</span><span class="notesDelimiter">`</span>
+ Logical volume size: <span class="notesDelimiter">`</span><span class="notesCode">1056MG</span><span class="notesDelimiter">`</span>
 
- ->`Finish`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Finish</span><span class="notesDelimiter">`</span>
 
- ->`#1` ->`Use as:…` ->`Ext4` ->`Mount point` ->`home`
- ->`#1` ->`Use as:…` ->`Ext4` ->`Mount point` ->`/`
- ->`#1` ->`Use as:…` ->`Ext4` ->`Mount point` ->`srv`
- ->`#1` ->`Use as:…` ->`swap` ->`Mount point` ->`swap`
- ->`#1` ->`Use as:…` ->`Ext4` ->`Mount point` ->`tmp`
- ->`#1` ->`Use as:…` ->`Ext4` ->`Mount point` ->`var`
- ->`#1` ->`Use as:…` ->`Ext4` ->`Moun…` ->`Enter Manually`->`/var/log`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Ext4</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Mount point</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">home</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Ext4</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Mount point</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">/</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Ext4</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Mount point</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">srv</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">swap</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Mount point</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">swap</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Ext4</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Mount point</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">tmp</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Ext4</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Mount point</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">var</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">#1</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Use as:…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Ext4</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Moun…</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Enter Manually</span><span class="notesDelimiter">`</span>-&gt;<span class="notesDelimiter">`</span><span class="notesCode">/var/log</span><span class="notesDelimiter">`</span>
 
- ->`Finish…`
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Finish…</span><span class="notesDelimiter">`</span>
 
 ------------------
 
- Scan extra installation media: `No`
+ Scan extra installation media: <span class="notesDelimiter">`</span><span class="notesCode">No</span><span class="notesDelimiter">`</span>
  Choose software to install: NONE
- Device for boot loader installation: `/dev/sda …`
+ Device for boot loader installation: <span class="notesDelimiter">`</span><span class="notesCode">/dev/sda …</span><span class="notesDelimiter">`</span>
 
 Log in as 'root'.
 List block devices informations:
-    # lsblk
+<span class="notesCode">    # lsblk</span>
 
-* Partitions and hard disks:
-> **/dev/hda** is the 'master *IDE*' (Integrated Drive Electronics)
-> drive on the primary 'IDE controller'. Partitions of this disk are
-> named hda1, hda2. A 'second IDE' device would be named hdb.  (The
-> motherboard has two IDE connectors on which we plug the cables which
-> can each accommodate 2 peripherals.
-    IDE connector 0 -> master: /dev/hda -> slave: /dev/hdb
-    IDE connector 1 -> master: /dev/hdc -> slave: /dev/hdd
-> 'hda1' to 'hda4' will be **primary** partitions.
-> 'hda5' to 'hda…' will be **logical** partitions (of an extended partition).
-> An **extended** partition is a primary partition which itself
-> contains another partition table.
+<span class="notesListMarker">*</span> Partitions and hard disks:
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">/dev/hda</span><span class="notesDelimiter">**</span> is the 'master <span class="notesDelimiter">*</span><span class="notesItalic">IDE</span><span class="notesDelimiter">*</span>' (Integrated Drive Electronics)
+<span class="notesBlockquote">&gt; </span>drive on the primary 'IDE controller'. Partitions of this disk are
+<span class="notesBlockquote">&gt; </span>named hda1, hda2. A 'second IDE' device would be named hdb.  (The
+<span class="notesBlockquote">&gt; </span>motherboard has two IDE connectors on which we plug the cables which
+<span class="notesBlockquote">&gt; </span>can each accommodate 2 peripherals.
+<span class="notesCode">    IDE connector 0 -&gt; master: /dev/hda -&gt; slave: /dev/hdb</span>
+<span class="notesCode">    IDE connector 1 -&gt; master: /dev/hdc -&gt; slave: /dev/hdd</span>
+<span class="notesBlockquote">&gt; </span>'hda1' to 'hda4' will be <span class="notesDelimiter">**</span><span class="notesBold">primary</span><span class="notesDelimiter">**</span> partitions.
+<span class="notesBlockquote">&gt; </span>'hda5' to 'hda…' will be <span class="notesDelimiter">**</span><span class="notesBold">logical</span><span class="notesDelimiter">**</span> partitions (of an extended partition).
+<span class="notesBlockquote">&gt; </span>An <span class="notesDelimiter">**</span><span class="notesBold">extended</span><span class="notesDelimiter">**</span> partition is a primary partition which itself
+<span class="notesBlockquote">&gt; </span>contains another partition table.
 
-> *SCSI* disks (Small Computer System Interface) will be same as above
-> with a 's' **dev/sda**.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">*</span><span class="notesItalic">SCSI</span><span class="notesDelimiter">*</span> disks (Small Computer System Interface) will be same as above
+<span class="notesBlockquote">&gt; </span>with a 's' <span class="notesDelimiter">**</span><span class="notesBold">dev/sda</span><span class="notesDelimiter">**</span>.
 
 The active partition is indicated by an *
-    # fdisk -l
+<span class="notesCode">    # fdisk -l</span>
 List devices files under root:
-    $ ls /dev
-> 'dev' stands for device, contains all the peripherals.
+<span class="notesCode">    $ ls /dev</span>
+<span class="notesBlockquote">&gt; </span>'dev' stands for device, contains all the peripherals.
 
-http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm
+<span class="notesUrl"><a href="http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm">http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm</a></span>
 
-###     Comfort
+<span class="notesH1">###     Comfort</span>
 
 Look for packages update:
-    $ apt update
+<span class="notesCode">    $ apt update</span>
 Upgrade what is upgradable:
-    $ apt upgrade
+<span class="notesCode">    $ apt upgrade</span>
 
 Swap Caps-lock and Ctrl:
-    $ vi /etc/default/keyboard
-    > XKBOPTIONS="ctrl:swapcaps"
+<span class="notesCode">    $ vi /etc/default/keyboard</span>
+<span class="notesCode">    &gt; XKBOPTIONS=&quot;ctrl:swapcaps&quot;</span>
 
-Install zsh, wget, curl, git, tmux, vim:
-    $ apt install zsh wget curl git tmux vim
+Install zsh, wget, curl, git, tmux, vim&#0058;
+<span class="notesCode">    $ apt install zsh wget curl git tmux vim</span>
 Install man pages
-    apt install man-db manpages-dev
+<span class="notesCode">    apt install man-db manpages-dev</span>
 
 Change default Shell:
-    $ chsh -s /bin/zsh
-    $ zsh
+<span class="notesCode">    $ chsh -s /bin/zsh</span>
+<span class="notesCode">    $ zsh</span>
 
 Import my mini-conf (for root)
-    $ mkdir ~/Documents
-    $ cd !$
-    $ git clone https://github.com/clem9nt/mini-conf
-    $ bash mini-conf/installer.sh
-    $ source ~/.zshrc
+<span class="notesCode">    $ mkdir ~/Documents</span>
+<span class="notesCode">    $ cd !$</span>
+<span class="notesCode">    $ git clone </span><span class="notesUrl"><a href="https://github.com/clem9nt/mini-conf">https://github.com/clem9nt/mini-conf</a></span>
+<span class="notesCode">    $ bash mini-conf/installer.sh</span>
+<span class="notesCode">    $ source ~/.zshrc</span>
 
 Set Vim as the default editor:
-    $ update-alternatives --list editor
-    $ update-alternatives --set editor /usr/bin/vim.basic
+<span class="notesCode">    $ update-alternatives --list editor</span>
+<span class="notesCode">    $ update-alternatives --set editor /usr/bin/vim.basic</span>
 
 Install sudo:
-    $ apt update
-    $ apt install sudo
+<span class="notesCode">    $ apt update</span>
+<span class="notesCode">    $ apt install sudo</span>
 
 Add 'cvidon' to 'sudo' group:
-    $ usermod -aG sudo cvidon
+<span class="notesCode">    $ usermod -aG sudo cvidon</span>
 Check entry:
-    $ getent group sudo
+<span class="notesCode">    $ getent group sudo</span>
 
 Login as 'cvidon':
-    $ su - cvidon
+<span class="notesCode">    $ su - cvidon</span>
 
 Change default Shell:
-    $ chsh -s /bin/zsh
-    $ zsh
+<span class="notesCode">    $ chsh -s /bin/zsh</span>
+<span class="notesCode">    $ zsh</span>
 
 Import my mini-conf (for cvidon)
-    $ mkdir ~/Documents
-    $ cd !$
-    $ git clone https://github.com/clem9nt/mini-conf
-    $ bash mini-conf/installer.sh
-    $ source ~/.zshrc
+<span class="notesCode">    $ mkdir ~/Documents</span>
+<span class="notesCode">    $ cd !$</span>
+<span class="notesCode">    $ git clone </span><span class="notesUrl"><a href="https://github.com/clem9nt/mini-conf">https://github.com/clem9nt/mini-conf</a></span>
+<span class="notesCode">    $ bash mini-conf/installer.sh</span>
+<span class="notesCode">    $ source ~/.zshrc</span>
 
 Update the time:
 Install 'dbus' package:
-    $ apt install dbus
-    $ reboot
+<span class="notesCode">    $ apt install dbus</span>
+<span class="notesCode">    $ reboot</span>
 Check current timezone:
-    $ timedatectl
+<span class="notesCode">    $ timedatectl</span>
 Find a timezone:
-    $ timedatectl list-timezones | grep Paris
+<span class="notesCode">    $ timedatectl list-timezones | grep Paris</span>
 Change the timezone:
-    # timedatectl set-timezone Europe/Paris
+<span class="notesCode">    # timedatectl set-timezone Europe/Paris</span>
 
-###     Sudoers
+<span class="notesH1">###     Sudoers</span>
 
 Create 'mysudoers' to configure 'sudoers' group:
-    # touch /etc/sudoers.d/mysudoers
+<span class="notesCode">    # touch /etc/sudoers.d/mysudoers</span>
 
-> Writing to **sudoers.d/mysudoers** instead of 'sudoers' is safer
-> because 'sudoers' is under control of the distribution package
-> manager and an upgrade can overwrite it.
-https://superuser.com/questions/869144/why-does-the-system-have-etc-sudoers-d-how-should-i-edit-it
+<span class="notesBlockquote">&gt; </span>Writing to <span class="notesDelimiter">**</span><span class="notesBold">sudoers.d/mysudoers</span><span class="notesDelimiter">**</span> instead of 'sudoers' is safer
+<span class="notesBlockquote">&gt; </span>because 'sudoers' is under control of the distribution package
+<span class="notesBlockquote">&gt; </span>manager and an upgrade can overwrite it.
+<span class="notesUrl"><a href="https://superuser.com/questions/869144/why-does-the-system-have-etc-sudoers-d-how-should-i-edit-it">https://superuser.com/questions/869144/why-does-the-system-have-etc-sudoers-d-how-should-i-edit-it</a></span>
 
 Add the rules:
-    # visudo -f /etc/sudoers.d/mysudoers
-    > Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
-    > Defaults  passwd_tries=3
-    > Defaults  badpass_message="Wrong password.  This incident will be reported."
-    > Defaults  iolog_dir=/var/log/sudo/%{user}
-    > Defaults  log_input,log_output
-    > Defaults  requiretty
+<span class="notesCode">    # visudo -f /etc/sudoers.d/mysudoers</span>
+<span class="notesCode">    &gt; Defaults  secure_path=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&quot;</span>
+<span class="notesCode">    &gt; Defaults  passwd_tries=3</span>
+<span class="notesCode">    &gt; Defaults  badpass_message=&quot;Wrong password.  This incident will be reported.&quot;</span>
+<span class="notesCode">    &gt; Defaults  iolog_dir=/var/log/sudo/%{user}</span>
+<span class="notesCode">    &gt; Defaults  log_input,log_output</span>
+<span class="notesCode">    &gt; Defaults  requiretty</span>
 
 Create '/var/log/sudo/' for 'logfile'
-    # mv /var/log/sudo
+<span class="notesCode">    # mv /var/log/sudo</span>
 
-> **secure_path** prevent any script to be executed with sudo unless
-> it matches the secure path.
-> **requiretty** prevents sudo from being used from daemons or
-> other detached processes (cronjobs, web server plugins).
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">secure_path</span><span class="notesDelimiter">**</span> prevent any script to be executed with sudo unless
+<span class="notesBlockquote">&gt; </span>it matches the secure path.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">requiretty</span><span class="notesDelimiter">**</span> prevents sudo from being used from daemons or
+<span class="notesBlockquote">&gt; </span>other detached processes (cronjobs, web server plugins).
 
-###     UFW (Uncomplicated Firewall)
+<span class="notesH1">###     UFW (Uncomplicated Firewall)</span>
 
 Install UFW:
-    # apt update
-    # apt install ufw
+<span class="notesCode">    # apt update</span>
+<span class="notesCode">    # apt install ufw</span>
 Enable UFW at system startup:
-    # ufw enable
+<span class="notesCode">    # ufw enable</span>
 
-> A `# systemctl status ufw` will display '*active (exited)*' because
-> it is a oneshot service.  **Oneshot services** are expected to take
-> action and exit immediately, thus they are not really services, no
-> running processes remain.
+<span class="notesBlockquote">&gt; </span>A <span class="notesDelimiter">`</span><span class="notesCode"># systemctl status ufw</span><span class="notesDelimiter">`</span> will display '<span class="notesDelimiter">*</span><span class="notesItalic">active (exited)</span><span class="notesDelimiter">*</span>' because
+<span class="notesBlockquote">&gt; </span>it is a oneshot service.  <span class="notesDelimiter">**</span><span class="notesBold">Oneshot services</span><span class="notesDelimiter">**</span> are expected to take
+<span class="notesBlockquote">&gt; </span>action and exit immediately, thus they are not really services, no
+<span class="notesBlockquote">&gt; </span>running processes remain.
 
-###     SSH Daemon
+<span class="notesH1">###     SSH Daemon</span>
 
-> **SSH** Secure Shell or Secure Socket Shell, allows to securely
-> connect to a remote computer or a server by using a text based
-> interface.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">SSH</span><span class="notesDelimiter">**</span> Secure Shell or Secure Socket Shell, allows to securely
+<span class="notesBlockquote">&gt; </span>connect to a remote computer or a server by using a text based
+<span class="notesBlockquote">&gt; </span>interface.
 
 Install:
-    # apt update
-    # apt install openssh-server
+<span class="notesCode">    # apt update</span>
+<span class="notesCode">    # apt install openssh-server</span>
 
 Check if SSH daemon is running:
-    # service ssh status
-> Same as 'sshd'.
+<span class="notesCode">    # service ssh status</span>
+<span class="notesBlockquote">&gt; </span>Same as 'sshd'.
 
 Change SSH default port 22 to port 4242:
-    # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
-    # vi /etc/ssh/sshd_config
-Replace `#Port 22` with
-    > Port 4242
+<span class="notesCode">    # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak</span>
+<span class="notesCode">    # vi /etc/ssh/sshd_config</span>
+Replace <span class="notesDelimiter">`</span><span class="notesCode">#Port 22</span><span class="notesDelimiter">`</span> with
+<span class="notesCode">    &gt; Port 4242</span>
 Make sure we can not connect with root through SSH:
-    > PermitRootLogin no
+<span class="notesCode">    &gt; PermitRootLogin no</span>
 
-Add firewall exceptions to *tcp* port 4242:
-    # ufw allow 4242/tcp
+Add firewall exceptions to <span class="notesDelimiter">*</span><span class="notesItalic">tcp</span><span class="notesDelimiter">*</span> port 4242:
+<span class="notesCode">    # ufw allow 4242/tcp</span>
 Check firewall exceptions:
-    # ufw status
+<span class="notesCode">    # ufw status</span>
 
 Restart SSH:
-    # service ssh restart
+<span class="notesCode">    # service ssh restart</span>
 
-###     SSH Connection
+<span class="notesH1">###     SSH Connection</span>
 
 Open the VM ports:
-MyVM ->`Settings` ->`Network`
- Attached to: `NAT`
- ->`Advanced` ->`Port Forwarding`
- ->(+) Name:`SSH`| Host Port:`4242`| Guest Port:`4242`
+MyVM -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Network</span><span class="notesDelimiter">`</span>
+ Attached to: <span class="notesDelimiter">`</span><span class="notesCode">NAT</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Advanced</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Port Forwarding</span><span class="notesDelimiter">`</span>
+ -&gt;(+) Name:<span class="notesDelimiter">`</span><span class="notesCode">SSH</span><span class="notesDelimiter">`</span>| Host Port:<span class="notesDelimiter">`</span><span class="notesCode">4242</span><span class="notesDelimiter">`</span>| Guest Port:<span class="notesDelimiter">`</span><span class="notesCode">4242</span><span class="notesDelimiter">`</span>
 
 Check the Port 4242 host NAT:
-    # netstat -an | grep 4242
+<span class="notesCode">    # netstat -an | grep 4242</span>
 
 Connect to guest from host:
-    $ ssh -p 4242 cvidon@127.0.0.1
+<span class="notesCode">    $ ssh -p 4242 cvidon@127.0.0.1</span>
 
 SFTP (Secure File Transfer Protocol):
 Connect to guest from host:
-    $ sftp -P 4242 cvidon@127.0.0.1
+<span class="notesCode">    $ sftp -P 4242 cvidon@127.0.0.1</span>
 Put, get, rm a file:
-    sftp> put <filename>
-    sftp> get <filename>
-    sftp> rm  <filename>
+<span class="notesCode">    sftp&gt; put &lt;filename&gt;</span>
+<span class="notesCode">    sftp&gt; get &lt;filename&gt;</span>
+<span class="notesCode">    sftp&gt; rm  &lt;filename&gt;</span>
 
-###     Password Policy
+<span class="notesH1">###     Password Policy</span>
 
-* Install password quality checking library:
-    # apt install libpam-pwquality
+<span class="notesListMarker">*</span> Install password quality checking library:
+<span class="notesCode">    # apt install libpam-pwquality</span>
 
-* Configure a strong password policy:
-    # cp /etc/pam.d/common-password /etc/pam.d/common-password.bak
-    # vi /etc/pam.d/common-password
+<span class="notesListMarker">*</span> Configure a strong password policy:
+<span class="notesCode">    # cp /etc/pam.d/common-password /etc/pam.d/common-password.bak</span>
+<span class="notesCode">    # vi /etc/pam.d/common-password</span>
 
-* To the end of the line matching `requisite  pam_pwquality.so`
-  after `retry=3` (space separated) append:
-> 10 chars long minimum.
-    > minlen=10
-> At least 1 special char and 1 lcase.
-    > ocredit=-1 lcredit=-1
-> At least 1 ucase, 1 number and 3 consecutive identical chars max.
-    > ucredit=-1 dcredit=-1 maxrepeat=3
-> Shouldn't include the username.
-    > reject_username
-> At least 7 chars that are not part of the former password.
-    > difok=7
-> Previous rules also apply to root.
-    > enforce_for_root
+<span class="notesListMarker">*</span> To the end of the line matching <span class="notesDelimiter">`</span><span class="notesCode">requisite  pam_pwquality.so</span><span class="notesDelimiter">`</span>
+  after <span class="notesDelimiter">`</span><span class="notesCode">retry=3</span><span class="notesDelimiter">`</span> (space separated) append:
+<span class="notesBlockquote">&gt; </span>10 chars long minimum.
+<span class="notesCode">    &gt; minlen=10</span>
+<span class="notesBlockquote">&gt; </span>At least 1 special char and 1 lcase.
+<span class="notesCode">    &gt; ocredit=-1 lcredit=-1</span>
+<span class="notesBlockquote">&gt; </span>At least 1 ucase, 1 number and 3 consecutive identical chars max.
+<span class="notesCode">    &gt; ucredit=-1 dcredit=-1 maxrepeat=3</span>
+<span class="notesBlockquote">&gt; </span>Shouldn't include the username.
+<span class="notesCode">    &gt; reject_username</span>
+<span class="notesBlockquote">&gt; </span>At least 7 chars that are not part of the former password.
+<span class="notesCode">    &gt; difok=7</span>
+<span class="notesBlockquote">&gt; </span>Previous rules also apply to root.
+<span class="notesCode">    &gt; enforce_for_root</span>
 
-> **pam_pwquality**: `-N` means 'minimum of N' and `+N` means 'maximum
-> of N'. Also `enforce_for_root`won't apply to `difok` because "root
-> is not asked for an old password so the checks that compare the old
-> and new password are not performed."
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">pam_pwquality</span><span class="notesDelimiter">**</span>: <span class="notesDelimiter">`</span><span class="notesCode">-N</span><span class="notesDelimiter">`</span> means 'minimum of N' and <span class="notesDelimiter">`</span><span class="notesCode">+N</span><span class="notesDelimiter">`</span> means 'maximum
+<span class="notesBlockquote">&gt; </span>of N'. Also <span class="notesDelimiter">`</span><span class="notesCode">enforce_for_root</span><span class="notesDelimiter">`</span>won't apply to <span class="notesDelimiter">`</span><span class="notesCode">difok</span><span class="notesDelimiter">`</span> because &quot;root
+<span class="notesBlockquote">&gt; </span>is not asked for an old password so the checks that compare the old
+<span class="notesBlockquote">&gt; </span>and new password are not performed.&quot;
 
-* Configure password expiration:
-    # cp /etc/login.defs /etc/login.defs.bak
-    # vi /etc/login.defs
-    > PASS_MAX_DAYS 30
-    > PASS_MIN_DAYS 2
-    > PASS_WARN_AGE 7
-> Expire every 30 days.
-> 2 days minimum between the modifications of a password
-> Warning message 7 days before password expire.
+<span class="notesListMarker">*</span> Configure password expiration:
+<span class="notesCode">    # cp /etc/login.defs /etc/login.defs.bak</span>
+<span class="notesCode">    # vi /etc/login.defs</span>
+<span class="notesCode">    &gt; PASS_MAX_DAYS 30</span>
+<span class="notesCode">    &gt; PASS_MIN_DAYS 2</span>
+<span class="notesCode">    &gt; PASS_WARN_AGE 7</span>
+<span class="notesBlockquote">&gt; </span>Expire every 30 days.
+<span class="notesBlockquote">&gt; </span>2 days minimum between the modifications of a password
+<span class="notesBlockquote">&gt; </span>Warning message 7 days before password expire.
 
 Apply this parameters to existing users:
 PASS_MIN_DAYS 2:
-    # chage --mindays 2 <user>
+<span class="notesCode">    # chage --mindays 2 &lt;user&gt;</span>
 PASS_MAX_DAYS 30:
-    # chage --maxday 30 <user>
+<span class="notesCode">    # chage --maxday 30 &lt;user&gt;</span>
 PASS_WARN_AGE 7:
-    # chage --warndays 7 <user>
+<span class="notesCode">    # chage --warndays 7 &lt;user&gt;</span>
 
 Check the password policy:
-    $ chage -l <user>
+<span class="notesCode">    $ chage -l &lt;user&gt;</span>
 
-###     Update Passwords
+<span class="notesH1">###     Update Passwords</span>
 
-* Change disk password:
+<span class="notesListMarker">*</span> Change disk password:
 Find UUID of the drive:
-    $ cat /etc/crypttab
+<span class="notesCode">    $ cat /etc/crypttab</span>
 Find the ID of the drive:
-    # blkid | grep <some_UUID_chars> | cut -d : -f 1
+<span class="notesCode">    # blkid | grep &lt;some_UUID_chars&gt; | cut -d : -f 1</span>
 Add a passphrase:
-    # cryptsetup luksAddKey <ID>
+<span class="notesCode">    # cryptsetup luksAddKey &lt;ID&gt;</span>
 Remove a passphrase:
-    # cryptsetup luksRemoveKey <ID>
+<span class="notesCode">    # cryptsetup luksRemoveKey &lt;ID&gt;</span>
 
-> It is *important* keep at least one passphrase before removing last
-> one.
+<span class="notesBlockquote">&gt; </span>It is <span class="notesDelimiter">*</span><span class="notesItalic">important</span><span class="notesDelimiter">*</span> keep at least one passphrase before removing last
+<span class="notesBlockquote">&gt; </span>one.
 
 Change users password:
-    # passwd <user>
-    > <pass>
+<span class="notesCode">    # passwd &lt;user&gt;</span>
+<span class="notesCode">    &gt; &lt;pass&gt;</span>
 
-###     Groups and Users
+<span class="notesH1">###     Groups and Users</span>
 
-> **usermod** modifies or changes any attributes of an 'already
-> existing' user.  (unlike `adduser` used to 'create' an user account)
-> `-G` specifies the list of supplementary groups,`-a` to 'append'
-> instead of 'replaces' the user's group with the supplementary ones.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">usermod</span><span class="notesDelimiter">**</span> modifies or changes any attributes of an 'already
+<span class="notesBlockquote">&gt; </span>existing' user.  (unlike <span class="notesDelimiter">`</span><span class="notesCode">adduser</span><span class="notesDelimiter">`</span> used to 'create' an user account)
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">`</span><span class="notesCode">-G</span><span class="notesDelimiter">`</span> specifies the list of supplementary groups,<span class="notesDelimiter">`</span><span class="notesCode">-a</span><span class="notesDelimiter">`</span> to 'append'
+<span class="notesBlockquote">&gt; </span>instead of 'replaces' the user's group with the supplementary ones.
 
-> **getent** get a databases text file entries (ie. `group` database's
-> entries `sudo` and `user`).
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">getent</span><span class="notesDelimiter">**</span> get a databases text file entries (ie. <span class="notesDelimiter">`</span><span class="notesCode">group</span><span class="notesDelimiter">`</span> database's
+<span class="notesBlockquote">&gt; </span>entries <span class="notesDelimiter">`</span><span class="notesCode">sudo</span><span class="notesDelimiter">`</span> and <span class="notesDelimiter">`</span><span class="notesCode">user</span><span class="notesDelimiter">`</span>).
 
-* Create 'user42' group:
-    # groupadd user42
+<span class="notesListMarker">*</span> Create 'user42' group:
+<span class="notesCode">    # groupadd user42</span>
 Check if the group is created:
-    # getent group user42
+<span class="notesCode">    # getent group user42</span>
 
-* Set 'cvidon' groups to 'user42':
-    # usermod -aG user42 cvidon
+<span class="notesListMarker">*</span> Set 'cvidon' groups to 'user42':
+<span class="notesCode">    # usermod -aG user42 cvidon</span>
 Check 'cvidon' groups:
-    # groups cvidon
+<span class="notesCode">    # groups cvidon</span>
 
 Check all the local users:
-    $ cut -d: -f1 /etc/passwd
+<span class="notesCode">    $ cut -d: -f1 /etc/passwd</span>
 
-Delete <group>:
-    $ delgroup <group>
-Delete <user> (and all its files):
-    $ deluser --remove-all-files <user>
+Delete &lt;group&gt;:
+<span class="notesCode">    $ delgroup &lt;group&gt;</span>
+Delete &lt;user&gt; (and all its files):
+<span class="notesCode">    $ deluser --remove-all-files &lt;user&gt;</span>
 
-###     Crontab Monitoring
+<span class="notesH1">###     Crontab Monitoring</span>
 
 Install 'netstat tools':
-    # apt update
-    # apt install net-tools
+<span class="notesCode">    # apt update</span>
+<span class="notesCode">    # apt install net-tools</span>
 
 Create and place 'monitoring.sh' in /usr/local/bin/:
-    > #!/bin/bash
-    > arc=$(uname -a)
-    > pcpu=$(grep "physical id" /proc/cpuinfo | sort | uniq | wc -l)
-    > vcpu=$(grep "^processor" /proc/cpuinfo | wc -l)
-    > fram=$(free -m | grep Mem: | awk '{print $2}')
-    > uram=$(free -m | grep Mem: | awk '{print $3}')
-    > pram=$(free    | grep Mem: | awk '{printf("%.2f"), $3/$2*100}')
-    > fdisk=$(df -Bg | grep '^/dev/' | grep -v '/boot$' | awk '{ft += $2} END {print ft}')
-    > udisk=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} END {print ut}')
-    > pdisk=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} {ft+= $2} END {printf("%d"), ut/ft*100}')
-    > cpul=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}')
-    > lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
-    > lvmt=$(lsblk -o TYPE | grep "lvm" | wc -l)
-    > lvmu=$(if [ $lvmt -eq 0 ]; then echo no; else echo yes; fi)
-    >
-    > # net-tools required:
-    > ctcp=$(cat /proc/net/tcp | wc -l | awk '{print $1-1}' | tr '' ' ')
-    > ulog=$(users | wc -w)
-    > ip=$(hostname -I)
-    > mac=$(ip link show | awk '$1 == "link/ether" {print $2}')
-    >
-    > # journalctl can run because the script exec from sudo cron
-    > cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
-    >
-    > echo "  #Architecture: $arc
-    >     #CPU physical: $pcpu
-    >     #vCPU: $vcpu
-    >     #Memory Usage: $uram/${fram}MB ($pram%)
-    >     #Disk Usage: $udisk/${fdisk}Gb ($pdisk%)
-    >     #CPU load: $cpul
-    >     #Last boot: $lb
-    >     #LVM use: $lvmu
-    >     #Connexions TCP : $ctcp ESTABLISHED
-    >     #User log: $ulog
-    >     #Network: IP $ip ($mac)
-    >     #Sudo: $cmds cmd"
+<span class="notesCode">    &gt; #!/bin/bash</span>
+<span class="notesCode">    &gt; arc=$(uname -a)</span>
+<span class="notesCode">    &gt; pcpu=$(grep &quot;physical id&quot; /proc/cpuinfo | sort | uniq | wc -l)</span>
+<span class="notesCode">    &gt; vcpu=$(grep &quot;^processor&quot; /proc/cpuinfo | wc -l)</span>
+<span class="notesCode">    &gt; fram=$(free -m | grep Mem: | awk '{print $2}')</span>
+<span class="notesCode">    &gt; uram=$(free -m | grep Mem: | awk '{print $3}')</span>
+<span class="notesCode">    &gt; pram=$(free    | grep Mem: | awk '{printf(&quot;%.2f&quot;), $3/$2*100}')</span>
+<span class="notesCode">    &gt; fdisk=$(df -Bg | grep '^/dev/' | grep -v '/boot$' | awk '{ft += $2} END {print ft}')</span>
+<span class="notesCode">    &gt; udisk=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} END {print ut}')</span>
+<span class="notesCode">    &gt; pdisk=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} {ft+= $2} END {printf(&quot;%d&quot;), ut/ft*100}')</span>
+<span class="notesCode">    &gt; cpul=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf(&quot;%.1f%%&quot;), $1 + $3}')</span>
+<span class="notesCode">    &gt; lb=$(who -b | awk '$1 == &quot;system&quot; {print $3 &quot; &quot; $4}')</span>
+<span class="notesCode">    &gt; lvmt=$(lsblk -o TYPE | grep &quot;lvm&quot; | wc -l)</span>
+<span class="notesCode">    &gt; lvmu=$(if [ $lvmt -eq 0 ]; then echo no; else echo yes; fi)</span>
+<span class="notesCode">    &gt;</span>
+<span class="notesCode">    &gt; # net-tools required:</span>
+<span class="notesCode">    &gt; ctcp=$(cat /proc/net/tcp | wc -l | awk '{print $1-1}' | tr '' ' ')</span>
+<span class="notesCode">    &gt; ulog=$(users | wc -w)</span>
+<span class="notesCode">    &gt; ip=$(hostname -I)</span>
+<span class="notesCode">    &gt; mac=$(ip link show | awk '$1 == &quot;link/ether&quot; {print $2}')</span>
+<span class="notesCode">    &gt;</span>
+<span class="notesCode">    &gt; # journalctl can run because the script exec from sudo cron</span>
+<span class="notesCode">    &gt; cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)</span>
+<span class="notesCode">    &gt;</span>
+<span class="notesCode">    &gt; echo &quot;  #Architecture: $arc</span>
+<span class="notesCode">    &gt;     #CPU physical: $pcpu</span>
+<span class="notesCode">    &gt;     #vCPU: $vcpu</span>
+<span class="notesCode">    &gt;     #Memory Usage: $uram/${fram}MB ($pram%)</span>
+<span class="notesCode">    &gt;     #Disk Usage: $udisk/${fdisk}Gb ($pdisk%)</span>
+<span class="notesCode">    &gt;     #CPU load: $cpul</span>
+<span class="notesCode">    &gt;     #Last boot: $lb</span>
+<span class="notesCode">    &gt;     #LVM use: $lvmu</span>
+<span class="notesCode">    &gt;     #Connexions TCP : $ctcp ESTABLISHED</span>
+<span class="notesCode">    &gt;     #User log: $ulog</span>
+<span class="notesCode">    &gt;     #Network: IP $ip ($mac)</span>
+<span class="notesCode">    &gt;     #Sudo: $cmds cmd&quot;</span>
 
 Check the script output:
-    $ bash /usr/local/bin/monitoring.sh
+<span class="notesCode">    $ bash /usr/local/bin/monitoring.sh</span>
 Open crontab and add the rule (that will be executed as root):
-    # crontab -u root -e
+<span class="notesCode">    # crontab -u root -e</span>
 Append:
-    > */10 * * * * bash /usr/local/bin/monitoring.sh | wall
+<span class="notesCode">    &gt; */10 * * * * bash /usr/local/bin/monitoring.sh | wall</span>
 
-https://crontab.guru/#*/10_*_*_*_*/
+<span class="notesUrl"><a href="https://crontab.guru/#*/10_*_*_*_*/">https://crontab.guru/#*/10_*_*_*_*/</a></span>
 
 Check Cron service status:
-    # systemctl status cron
+<span class="notesCode">    # systemctl status cron</span>
 Check that a silent script executes:
-    # grep -a "monitoring.sh" /var/log/syslog
+<span class="notesCode">    # grep -a &quot;monitoring.sh&quot; /var/log/syslog</span>
 
-##  LLMP
+<span class="notesH1">##  LLMP</span>
 
-> **LLMP Stack**: Linux Lighttpd MySQL and PHP.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">LLMP Stack</span><span class="notesDelimiter">**</span>: Linux Lighttpd MySQL and PHP.
 
-###     Lighttpd
+<span class="notesH1">###     Lighttpd</span>
 
 Install 'Lighttpd' web server:
-    # apt install lighttpd
+<span class="notesCode">    # apt install lighttpd</span>
 Check that Lighttpd is active and enabled:
-    # systemctl status lighttpd | grep -o "active\|; enabled;"
+<span class="notesCode">    # systemctl status lighttpd | grep -o &quot;active\|; enabled;&quot;</span>
 
-> **Lighttpd** (pronounced lighty) is a fast, secure, flexible and
-> open source web server optimized for high performance environments.
-> Suited to handle loads of traffic with minimal memory consumption.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">Lighttpd</span><span class="notesDelimiter">**</span> (pronounced lighty) is a fast, secure, flexible and
+<span class="notesBlockquote">&gt; </span>open source web server optimized for high performance environments.
+<span class="notesBlockquote">&gt; </span>Suited to handle loads of traffic with minimal memory consumption.
 
-Add firewall exceptions to *tcp* port 80:
-    # ufw allow 80/tcp
+Add firewall exceptions to <span class="notesDelimiter">*</span><span class="notesItalic">tcp</span><span class="notesDelimiter">*</span> port 80:
+<span class="notesCode">    # ufw allow 80/tcp</span>
 Check firewall exceptions:
-    # ufw status
+<span class="notesCode">    # ufw status</span>
 
-* Check Lighttpd welcome page from the host web browser:
+<span class="notesListMarker">*</span> Check Lighttpd welcome page from the host web browser:
 
 Open the VM ports:
-MyVM ->`Settings` ->`Network`
- Attached to: `NAT`
- ->`Advanced` ->`Port Forwarding`
- ->(+) Name:`WWW`| Host Port:`80`| Guest Port:`80`
+MyVM -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Network</span><span class="notesDelimiter">`</span>
+ Attached to: <span class="notesDelimiter">`</span><span class="notesCode">NAT</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Advanced</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Port Forwarding</span><span class="notesDelimiter">`</span>
+ -&gt;(+) Name:<span class="notesDelimiter">`</span><span class="notesCode">WWW</span><span class="notesDelimiter">`</span>| Host Port:<span class="notesDelimiter">`</span><span class="notesCode">80</span><span class="notesDelimiter">`</span>| Guest Port:<span class="notesDelimiter">`</span><span class="notesCode">80</span><span class="notesDelimiter">`</span>
 
 Check the Port 80 host NAT:
-    # netstat -an | grep 80
+<span class="notesCode">    # netstat -an | grep 80</span>
 
 Visit Lighttpd welcome page at the address 127.0.0.1 from the host web browser.
 
-###     MariaDB
+<span class="notesH1">###     MariaDB</span>
 
 Install 'MariaDB':
-    # apt install mariadb-server
+<span class="notesCode">    # apt install mariadb-server</span>
 Check that MariaDB is active and enabled:
-    # systemctl status mariadb | grep -o "active\|; enabled;"
+<span class="notesCode">    # systemctl status mariadb | grep -o &quot;active\|; enabled;&quot;</span>
 
-> **MariaDB** is a DBMS (Relational Database Management System) that
-> is a fork and an alternative to MySQL (that uses some proprietary
-> code).  https://kinsta.com/blog/mariadb-vs-mysql/
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">MariaDB</span><span class="notesDelimiter">**</span> is a DBMS (Relational Database Management System) that
+<span class="notesBlockquote">&gt; </span>is a fork and an alternative to MySQL (that uses some proprietary
+<span class="notesBlockquote">&gt; </span>code).  <span class="notesUrl"><a href="https://kinsta.com/blog/mariadb-vs-mysql/">https://kinsta.com/blog/mariadb-vs-mysql/</a></span>
 
 Configure MariaDB security settings:
-    # mysql_secure_installation
- Enter current password for root (enter for none): `enter`
- Switch to unix_socket authentication? `n`
-> 'unix_socket' auth. plugin is a passwordless security mechanism.
- Set root password? `n`
- Remove anonymous users? `Y`
- Disallow root login remotely? `Y`
- Remove test database and access to it? `Y`
- Reload privilege tables now? `Y`
+<span class="notesCode">    # mysql_secure_installation</span>
+ Enter current password for root (enter for none): <span class="notesDelimiter">`</span><span class="notesCode">enter</span><span class="notesDelimiter">`</span>
+ Switch to unix_socket authentication? <span class="notesDelimiter">`</span><span class="notesCode">n</span><span class="notesDelimiter">`</span>
+<span class="notesBlockquote">&gt; </span>'unix_socket' auth. plugin is a passwordless security mechanism.
+ Set root password? <span class="notesDelimiter">`</span><span class="notesCode">n</span><span class="notesDelimiter">`</span>
+ Remove anonymous users? <span class="notesDelimiter">`</span><span class="notesCode">Y</span><span class="notesDelimiter">`</span>
+ Disallow root login remotely? <span class="notesDelimiter">`</span><span class="notesCode">Y</span><span class="notesDelimiter">`</span>
+ Remove test database and access to it? <span class="notesDelimiter">`</span><span class="notesCode">Y</span><span class="notesDelimiter">`</span>
+ Reload privilege tables now? <span class="notesDelimiter">`</span><span class="notesCode">Y</span><span class="notesDelimiter">`</span>
 
 Log in to MariaDB console:
-    # mysql
-> Same as `# mariadb`.
+<span class="notesCode">    # mysql</span>
+<span class="notesBlockquote">&gt; </span>Same as <span class="notesDelimiter">`</span><span class="notesCode"># mariadb</span><span class="notesDelimiter">`</span>.
 
 Create 'clem-db' new database:
-    mysql> CREATE DATABASE clem_db;
+<span class="notesCode">    mysql&gt; CREATE DATABASE clem_db;</span>
 
 Create 'clem' database user identified by 'melc' password:
-    mysql> CREATE USER clem@localhost IDENTIFIED BY 'melc';
+<span class="notesCode">    mysql&gt; CREATE USER clem@localhost IDENTIFIED BY 'melc';</span>
 Give full privileges on 'clem_db' to 'clem':
-    mysql> GRANT ALL ON clem_db.* TO clem@localhost WITH GRANT OPTION;
+<span class="notesCode">    mysql&gt; GRANT ALL ON clem_db.* TO clem@localhost WITH GRANT OPTION;</span>
 
 Makes those changes take effect (without reload/restart MariaDB):
-    mysql> FLUSH PRIVILEGES;
+<span class="notesCode">    mysql&gt; FLUSH PRIVILEGES;</span>
 
 Check all users and host name where they are allowed to login:
-    mysql> SELECT host, user FROM mysql.user;
-Exit MariaDB shell: `exit`
+<span class="notesCode">    mysql&gt; SELECT host, user FROM mysql.user;</span>
+Exit MariaDB shell: <span class="notesDelimiter">`</span><span class="notesCode">exit</span><span class="notesDelimiter">`</span>
 
 Log into MariaDB server with the new user:
-    # mysql -u clem -p
+<span class="notesCode">    # mysql -u clem -p</span>
 
 Check which databases user has access to:
-    mysql> SHOW DATABASES;
-Exit MariaDB shell: `exit`
+<span class="notesCode">    mysql&gt; SHOW DATABASES;</span>
+Exit MariaDB shell: <span class="notesDelimiter">`</span><span class="notesCode">exit</span><span class="notesDelimiter">`</span>
 
-###     PHP
+<span class="notesH1">###     PHP</span>
 
 Install php and php-mysql
-    # apt install php-cgi php-mysql
+<span class="notesCode">    # apt install php-cgi php-mysql</span>
 
-> **php-mysql** package provides SQL modules for PHP.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">php-mysql</span><span class="notesDelimiter">**</span> package provides SQL modules for PHP.
 
-> **CGI** (Common Gateway Interface) is a protocol used by most Web
-> servers to capture and communicate session information to and from
-> server-side processes. It *connects the front and the back* end to
-> make web pages dynamic and interactive.
-http://www.uvm.edu/~hag/naweb96/zshoecraft.html
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">CGI</span><span class="notesDelimiter">**</span> (Common Gateway Interface) is a protocol used by most Web
+<span class="notesBlockquote">&gt; </span>servers to capture and communicate session information to and from
+<span class="notesBlockquote">&gt; </span>server-side processes. It <span class="notesDelimiter">*</span><span class="notesItalic">connects the front and the back</span><span class="notesDelimiter">*</span> end to
+<span class="notesBlockquote">&gt; </span>make web pages dynamic and interactive.
+<span class="notesUrl"><a href="http://www.uvm.edu/~hag/naweb96/zshoecraft.html">http://www.uvm.edu/~hag/naweb96/zshoecraft.html</a></span>
 
-> **PHP CGI** is the legacy way of running applications, it goes with very
-> *poor performance* for busier websites: each time we load a page,
-> PHP needs read php.ini, set its settings, loads all its extensions,
-> and finally start work parsing the script.
-> - One key *advantage* to using the CGI version is that PHP reads its
->   settings every time you load a page.  With PHP running as a module,
->   any changes you make in the php.ini file do not kick in until we
->   restart our web server, so the CGI version is preferable if we *testing*
->   new settings and want to see instant responses.
-> - Another *benefit* of CGI is that it keeps the code execution
->   separate from the web server, increasing the *security*.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">PHP CGI</span><span class="notesDelimiter">**</span> is the legacy way of running applications, it goes with very
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">*</span><span class="notesItalic">poor performance</span><span class="notesDelimiter">*</span> for busier websites: each time we load a page,
+<span class="notesBlockquote">&gt; </span>PHP needs read php.ini, set its settings, loads all its extensions,
+<span class="notesBlockquote">&gt; </span>and finally start work parsing the script.
+<span class="notesBlockquote">&gt; </span>- One key <span class="notesDelimiter">*</span><span class="notesItalic">advantage</span><span class="notesDelimiter">*</span> to using the CGI version is that PHP reads its
+<span class="notesBlockquote">&gt; </span>  settings every time you load a page.  With PHP running as a module,
+<span class="notesBlockquote">&gt; </span>  any changes you make in the php.ini file do not kick in until we
+<span class="notesBlockquote">&gt; </span>  restart our web server, so the CGI version is preferable if we <span class="notesDelimiter">*</span><span class="notesItalic">testing</span><span class="notesDelimiter">*</span>
+<span class="notesBlockquote">&gt; </span>  new settings and want to see instant responses.
+<span class="notesBlockquote">&gt; </span>- Another <span class="notesDelimiter">*</span><span class="notesItalic">benefit</span><span class="notesDelimiter">*</span> of CGI is that it keeps the code execution
+<span class="notesBlockquote">&gt; </span>  separate from the web server, increasing the <span class="notesDelimiter">*</span><span class="notesItalic">security</span><span class="notesDelimiter">*</span>.
 
-> **PHP-FPM** (FastCGI Process Manager) is an alternative that allows
-> a website to handle strenuous loads. *Modern, optimized, robust* for
-> busier websites and low resources consumption but *lower security*
-> than CGI and require more *complicated configuration* than CGI.
-https://www.basezap.com/difference-php-cgi-php-fpm/
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">PHP-FPM</span><span class="notesDelimiter">**</span> (FastCGI Process Manager) is an alternative that allows
+<span class="notesBlockquote">&gt; </span>a website to handle strenuous loads. <span class="notesDelimiter">*</span><span class="notesItalic">Modern, optimized, robust</span><span class="notesDelimiter">*</span> for
+<span class="notesBlockquote">&gt; </span>busier websites and low resources consumption but <span class="notesDelimiter">*</span><span class="notesItalic">lower security</span><span class="notesDelimiter">*</span>
+<span class="notesBlockquote">&gt; </span>than CGI and require more <span class="notesDelimiter">*</span><span class="notesItalic">complicated configuration</span><span class="notesDelimiter">*</span> than CGI.
+<span class="notesUrl"><a href="https://www.basezap.com/difference-php-cgi-php-fpm/">https://www.basezap.com/difference-php-cgi-php-fpm/</a></span>
 
 Enable FastCGI Lighttpd modules:
-    # lighty-enable-mod fastcgi
-    # lighty-enable-mod fastcgi-php
+<span class="notesCode">    # lighty-enable-mod fastcgi</span>
+<span class="notesCode">    # lighty-enable-mod fastcgi-php</span>
 Restart server:
-    # service lighttpd force-reload
+<span class="notesCode">    # service lighttpd force-reload</span>
 
-###     WP
+<span class="notesH1">###     WP</span>
 
 Download WP to '/var/www/html'
-    # wget http://wordpress.org/latest.tar.gz
+<span class="notesCode">    # wget </span><span class="notesUrl"><a href="http://wordpress.org/latest.tar.gz">http://wordpress.org/latest.tar.gz</a></span>
 Extract content:
-    # tar -xzvf latest.tar.gz
+<span class="notesCode">    # tar -xzvf latest.tar.gz</span>
 Copy content of '/var/www/html/wordpress' to '/var/www/html':
-    # cp -r wordpress/* /var/www/html
+<span class="notesCode">    # cp -r wordpress/* /var/www/html</span>
 Remove 'latest.tar.gz' and 'wordpress':
-    # rm -rf latest.tar.gz wordpress
+<span class="notesCode">    # rm -rf latest.tar.gz wordpress</span>
 
 Create WP config file:
-    # cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+<span class="notesCode">    # cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php</span>
 Reference 'clem_db' and 'clem' into config:
-    # vi /var/www/html/wp-config.php
-    > define( 'DB_NAME', 'clem_db' );
-    > define( 'DB_USER', 'clem' );
-    > define( 'DB_PASSWORD', 'melc' );
+<span class="notesCode">    # vi /var/www/html/wp-config.php</span>
+<span class="notesCode">    &gt; define( 'DB_NAME', 'clem_db' );</span>
+<span class="notesCode">    &gt; define( 'DB_USER', 'clem' );</span>
+<span class="notesCode">    &gt; define( 'DB_PASSWORD', 'melc' );</span>
 
 Visit localhost from the host web browser to see the WP default page.
 
-###     IPFS
+<span class="notesH1">###     IPFS</span>
 
 Download GO:
-    $ curl -O https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz
-    $ sha256sum go1.17.5.linux-amd64.tar.gz
-Compare with the online hash: https://go.dev/dl/
+<span class="notesCode">    $ curl -O </span><span class="notesUrl"><a href="https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz">https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz</a></span>
+<span class="notesCode">    $ sha256sum go1.17.5.linux-amd64.tar.gz</span>
+Compare with the online hash: <span class="notesUrl"><a href="https://go.dev/dl/">https://go.dev/dl/</a></span>
 
 Extract to '/usr/local':
-    # tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+<span class="notesCode">    # tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz</span>
 
 Update zsh env:
-    $ echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a ~/.zprofile
-    $ echo 'export GOPATH="$HOME/go"' | sudo tee -a ~/.zprofile
-    $ echo 'PATH="$GOPATH/bin:$PATH"' | sudo tee -a ~/.zprofile
+<span class="notesCode">    $ echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a ~/.zprofile</span>
+<span class="notesCode">    $ echo 'export GOPATH=&quot;$HOME/go&quot;' | sudo tee -a ~/.zprofile</span>
+<span class="notesCode">    $ echo 'PATH=&quot;$GOPATH/bin:$PATH&quot;' | sudo tee -a ~/.zprofile</span>
 Source zprofile:
-    $ source ~/.zprofile
+<span class="notesCode">    $ source ~/.zprofile</span>
 
 Check that GO is installed:
-    $ go version
+<span class="notesCode">    $ go version</span>
 
 Download IPFS:
-    $ go install github.com/ipfs/ipfs-update@latest
+<span class="notesCode">    $ go install github.com/ipfs/ipfs-update@latest</span>
 
 Check that IPFS is up to date:
-    $ ipfs-update versions
+<span class="notesCode">    $ ipfs-update versions</span>
 Update to whatever version is the latest:
-    $ ipfs-update install v0.11.0
+<span class="notesCode">    $ ipfs-update install v0.11.0</span>
 
 Increase maximum buffer size (from 300k to to 2500k):
-    # sysctl -w net.core.rmem_max=2500000
+<span class="notesCode">    # sysctl -w net.core.rmem_max=2500000</span>
 Initialize IPFS:
-    $ ipfs init --profile server
+<span class="notesCode">    $ ipfs init --profile server</span>
 
 Change IPFS repo size (default 10GB):
-    $ ipfs config Datastore.StorageMax 50MB
+<span class="notesCode">    $ ipfs config Datastore.StorageMax 50MB</span>
 
 Create a systemd service to make sure IPFS is running all the time:
-    # vi /etc/systemd/system/ipfs.service
-    > [Unit]
-    > Description=IPFS Daemon
-    > [Service]
-    > Type=simple
-    > ExecStart=/home/cvidon/go/bin/ipfs daemon --enable-gc
-    > Group=cvidon
-    > Restart=always
-    > Environment="IPFS_PATH=/home/cvidon/.ipfs"
-    > [Install]
-    > WantedBy=multi-user.target
+<span class="notesCode">    # vi /etc/systemd/system/ipfs.service</span>
+<span class="notesCode">    &gt; [Unit]</span>
+<span class="notesCode">    &gt; Description=IPFS Daemon</span>
+<span class="notesCode">    &gt; [Service]</span>
+<span class="notesCode">    &gt; Type=simple</span>
+<span class="notesCode">    &gt; ExecStart=/home/cvidon/go/bin/ipfs daemon --enable-gc</span>
+<span class="notesCode">    &gt; Group=cvidon</span>
+<span class="notesCode">    &gt; Restart=always</span>
+<span class="notesCode">    &gt; Environment=&quot;IPFS_PATH=/home/cvidon/.ipfs&quot;</span>
+<span class="notesCode">    &gt; [Install]</span>
+<span class="notesCode">    &gt; WantedBy=multi-user.target</span>
 
 Enable IPFS service:
-    # systemctl daemon-reload
-    # systemctl enable ipfs
-    # systemctl start ipfs
+<span class="notesCode">    # systemctl daemon-reload</span>
+<span class="notesCode">    # systemctl enable ipfs</span>
+<span class="notesCode">    # systemctl start ipfs</span>
 Check:
-    # systemctl status ipfs | grep -o "active\|; enabled;"
+<span class="notesCode">    # systemctl status ipfs | grep -o &quot;active\|; enabled;&quot;</span>
 
-Add firewall exceptions to *tcp* port 4001:
-    # ufw allow 4001/tcp
+Add firewall exceptions to <span class="notesDelimiter">*</span><span class="notesItalic">tcp</span><span class="notesDelimiter">*</span> port 4001:
+<span class="notesCode">    # ufw allow 4001/tcp</span>
 Check firewall exceptions:
-    # ufw status
+<span class="notesCode">    # ufw status</span>
 
 Open the VM ports:
-MyVM ->`Settings` ->`Network`
- Attached to: `NAT`
- ->`Advanced` ->`Port Forwarding`
- ->(+) Name:`IPFS`| Host Port:`4001`| Guest Port:`4001`
+MyVM -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Network</span><span class="notesDelimiter">`</span>
+ Attached to: <span class="notesDelimiter">`</span><span class="notesCode">NAT</span><span class="notesDelimiter">`</span>
+ -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Advanced</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Port Forwarding</span><span class="notesDelimiter">`</span>
+ -&gt;(+) Name:<span class="notesDelimiter">`</span><span class="notesCode">IPFS</span><span class="notesDelimiter">`</span>| Host Port:<span class="notesDelimiter">`</span><span class="notesCode">4001</span><span class="notesDelimiter">`</span>| Guest Port:<span class="notesDelimiter">`</span><span class="notesCode">4001</span><span class="notesDelimiter">`</span>
 
 Check the Port 4001 host NAT:
-    # netstat -an | grep 4001
+<span class="notesCode">    # netstat -an | grep 4001</span>
 
-https://docs.ipfs.io/how-to/observe-peers/
+<span class="notesUrl"><a href="https://docs.ipfs.io/how-to/observe-peers/">https://docs.ipfs.io/how-to/observe-peers/</a></span>
 See whose peer we are directly connected to:
-    $ ipfs swarm peers
+<span class="notesCode">    $ ipfs swarm peers</span>
 Print bandwidth information.
-    $ ipfs stats bw
+<span class="notesCode">    $ ipfs stats bw</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
