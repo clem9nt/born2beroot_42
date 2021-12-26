@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Born2Beroot 42</title>
-<meta name="description" content="Born2beroot is 42 school project that aims to introduce you to the wonderful world of virtualization. #42network">
+<title>~/Documents/Notes/_Projects/_42/ft_born2beroot.md.html</title>
 <meta name="Generator" content="Vim/8.1">
 <meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="none">
@@ -37,7 +36,7 @@ a { color: hotpink; }
 ------
 <span class="notesH1">##  Help</span>
 <span class="notesH1">##  Post-it</span>
-<span class="notesH1">##  Roadmap</span>
+<span class="notesH1">##  Server</span>
 <span class="notesH1">###     VM</span>
 <span class="notesH1">###     Install</span>
 <span class="notesH1">###     Partitioning</span>
@@ -59,17 +58,18 @@ a { color: hotpink; }
 
 <span class="notesH1">##  Help</span>
 
--&gt;<span class="notesDelimiter">`</span><span class="notesCode">Select/Click -able</span><span class="notesDelimiter">`</span>
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">definition</span><span class="notesDelimiter">**</span>
 <span class="notesBlockquote">&gt; </span>precision.
 &lt;variable_placeholder&gt;
+-&gt;<span class="notesDelimiter">`</span><span class="notesCode">Select/Click -able</span><span class="notesDelimiter">`</span>
+<span class="notesDelimiter">`</span><span class="notesCode"># root</span><span class="notesDelimiter">`</span>
 <span class="notesDelimiter">`</span><span class="notesCode">$ commandline</span><span class="notesDelimiter">`</span>
 <span class="notesDelimiter">`</span><span class="notesCode">- remove text</span><span class="notesDelimiter">`</span>
 <span class="notesDelimiter">`</span><span class="notesCode">+ insert text</span><span class="notesDelimiter">`</span>
 <span class="notesDelimiter">`</span><span class="notesCode">&gt; change text</span><span class="notesDelimiter">`</span>
 <span class="notesUrl"><a href="https://www.external_link">https://www.external_link</a></span>
 
-<span class="notesH1">##  Post-it</span>
+<span class="notesH1">###     Misc</span>
 
 <span class="notesListMarker">*</span> Services:
 
@@ -79,17 +79,6 @@ List running services:
 <span class="notesCode">    $ sudo systemctl status</span>
 List all services status:
 <span class="notesCode">    $ sudo systemctl</span>
-List services and their status:
-<span class="notesCode">    $ sudo systemctl -t service list-units &lt;pattern&gt;</span>
-
-<span class="notesListMarker">*</span> Networking:
-
-List currently used ports:
-<span class="notesCode">    $ ss -tunlp</span>
-Find which services use &lt;port&gt;:
-<span class="notesCode">    $ ss -tulp</span>
-List of ports and their default usage:
-<span class="notesCode">    $ vi /etc/services</span>
 
 <span class="notesListMarker">*</span> Errors:
 
@@ -101,9 +90,6 @@ Fix the startup error <span class="notesDelimiter">`</span><span class="notesCod
 
 <span class="notesListMarker">*</span> Misc:
 
-Display who is logged in and what they are doing:
-<span class="notesCode">    $ w</span>
-
 Check updates:
 <span class="notesCode">    $ apt update</span>
 <span class="notesCode">    $ apt upgrade</span>
@@ -112,21 +98,26 @@ Check updates:
 <span class="notesCode">    $ apt autoremove</span>
 <span class="notesCode">    $ apt autoclean</span>
 
-Cycle ttys:
+List network ports and their default usage:
+<span class="notesCode">    $ vi /etc/services</span>
+
+Display who is logged in and what they are doing:
+<span class="notesCode">    $ w</span>
+
+Cycle console ttys:
 <span class="notesCode">    Alt + Left/Right</span>
 <span class="notesCode">    Ctrl + Alt + &lt;f1_to_f6&gt;</span>
 
-Changes the hostname:
-<span class="notesCode">    # hostnamectl set-hostname &lt;new_name&gt;</span>
+Change hostname:
+<span class="notesCode">    $ sudo hostnamectl set-hostname &lt;new_name&gt;</span>
 Edit '/etc/hosts':
 <span class="notesCode">    $ sudo vi /etc/hosts</span>
-<span class="notesCode">    - 127.0.0.1   &lt;hostname&gt;</span>
-<span class="notesCode">    + 127.0.0.1   &lt;new_name&gt;</span>
+<span class="notesCode">    &gt; 127.0.1.1   &lt;new_name&gt;</span>
 <span class="notesCode">    $ sudo reboot</span>
-Check the current hostname:
+Check hostname:
 <span class="notesCode">    $ hostnamectl</span>
 
-<span class="notesH1">##  Roadmap</span>
+<span class="notesH1">##  Server</span>
 
 <span class="notesH1">###     VM</span>
 
@@ -198,7 +189,7 @@ Create <span class="notesDelimiter">`</span><span class="notesCode">/boot</span>
  Mount point: <span class="notesDelimiter">`</span><span class="notesCode">/boot</span><span class="notesDelimiter">`</span>
  -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Done setting up the partition</span><span class="notesDelimiter">`</span>
 
-Set the rest as <span class="notesDelimiter">*</span><span class="notesItalic">logical partition</span><span class="notesDelimiter">*</span> (LPAR):
+Set the rest as <span class="notesDelimiter">*</span><span class="notesItalic">logical partition</span><span class="notesDelimiter">*</span>:
 <span class="notesBlockquote">&gt; </span>Portion of a computer's hardware that is set aside and virtualised
 <span class="notesBlockquote">&gt; </span>as an additional computer.
  -&gt;<span class="notesDelimiter">`</span><span class="notesCode">FREE SPACE</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Create a new partition</span><span class="notesDelimiter">`</span>
@@ -259,7 +250,7 @@ Create the logical partitions:
 ------------------
 
  Scan extra installation media: <span class="notesDelimiter">`</span><span class="notesCode">No</span><span class="notesDelimiter">`</span>
- Choose software to install: NONE
+ Choose software to install: uncheck all
  Device for boot loader installation: <span class="notesDelimiter">`</span><span class="notesCode">/dev/sda …</span><span class="notesDelimiter">`</span>
 
 Log in as 'root'.
@@ -278,17 +269,11 @@ Check partitioning:
 <span class="notesBlockquote">&gt; </span>'hda5' to 'hda…' will be <span class="notesDelimiter">**</span><span class="notesBold">logical</span><span class="notesDelimiter">**</span> partitions (of an extended partition).
 <span class="notesBlockquote">&gt; </span>An <span class="notesDelimiter">**</span><span class="notesBold">extended</span><span class="notesDelimiter">**</span> partition is a primary partition which itself
 <span class="notesBlockquote">&gt; </span>contains another partition table.
+<span class="notesUrl"><a href="http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm">http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm</a></span>
 
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">*</span><span class="notesItalic">SCSI</span><span class="notesDelimiter">*</span> disks (Small Computer System Interface) will be same as above
 <span class="notesBlockquote">&gt; </span>with a 's' <span class="notesDelimiter">**</span><span class="notesBold">dev/sda</span><span class="notesDelimiter">**</span>.
-
-The active partition is indicated by an *
-<span class="notesCode">    # fdisk -l</span>
-List devices files under root:
-<span class="notesCode">    $ ls /dev</span>
-<span class="notesBlockquote">&gt; </span>/dev (device), contains all the peripherals.
-
-<span class="notesUrl"><a href="http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm">http://stephane.boireau.free.fr/informatique/samba/samba/partitions_et_disques_durs.htm</a></span>
+<span class="notesBlockquote">&gt; </span>The '/dev' contains all the peripherals (devices).
 
 <span class="notesH1">###     Comfort</span>
 
@@ -302,25 +287,22 @@ Caps lock to Ctrl:
 <span class="notesCode">    # vi /etc/default/keyboard</span>
 <span class="notesCode">    - XKBOPTIONS=&quot;&quot;</span>
 <span class="notesCode">    + XKBOPTIONS=&quot;ctrl:nocaps&quot;</span>
-Apply changes now:
+Apply now:
 <span class="notesCode">    # setupcon</span>
-Apply changes after reboot:
+Survive reboot:
 <span class="notesCode">    # dpkg-reconfigure keyboard-configuration</span>
 
 Check updates:
 <span class="notesCode">    # apt update</span>
-Install zsh, vim, tmux:
+Install most useful packages:
 <span class="notesCode">    # apt install zsh vim tmux</span>
-Install git, wget, curl:
 <span class="notesCode">    # apt install git wget curl</span>
-Install man pages:
 <span class="notesCode">    # apt install man-db manpages-dev</span>
+<span class="notesCode">    # apt install sudo</span>
 
 Set default editor:
 <span class="notesCode">    # update-alternatives --set editor /usr/bin/vim.basic</span>
 
-Install sudo:
-<span class="notesCode">    # apt install sudo</span>
 Add 'cvidon' to 'sudo' group:
 <span class="notesCode">    # usermod -aG sudo cvidon</span>
 <span class="notesCode">    # groups cvidon</span>
@@ -362,10 +344,10 @@ Configure 'sudoers' group via 'mysudoers':
 
 <span class="notesH1">###     UFW</span>
 
-Install UFW:
+Install package:
 <span class="notesCode">    $ sudo apt update</span>
 <span class="notesCode">    $ sudo apt install ufw</span>
-Enable UFW at system startup:
+Enable UFW:
 <span class="notesCode">    $ sudo ufw enable</span>
 
 <span class="notesBlockquote">&gt; </span>A <span class="notesDelimiter">`</span><span class="notesCode">$ sudo systemctl status ufw</span><span class="notesDelimiter">`</span> will display <span class="notesDelimiter">*</span><span class="notesItalic">active (exited)</span><span class="notesDelimiter">*</span>
@@ -373,98 +355,103 @@ Enable UFW at system startup:
 <span class="notesBlockquote">&gt; </span>to take action and exit immediately, thus they are not really
 <span class="notesBlockquote">&gt; </span>services, no running processes remain.
 
-Disable UFW logging from '/var/log/kern.log' and 'syslog' to reduce it
-to 'ufw.log':
+Disable UFW dupplicate logging /var/log/{kern.log,syslog} and reduce
+it to /var/log/ufw.log:
 <span class="notesCode">    $ sudo vi /etc/rsyslog.d/20-ufw.conf</span>
-<span class="notesCode">    - #&amp; stop</span>
-<span class="notesCode">    + &amp; stop</span>
+<span class="notesCode">    &gt; &amp; stop</span>
 
-<span class="notesH1">###     SSH Daemon</span>
+<span class="notesH1">###     SSH</span>
 
-<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">SSH</span><span class="notesDelimiter">**</span> Secure Shell or Secure Socket Shell, allows to securely
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">SSH</span><span class="notesDelimiter">**</span> (Secure Shell or Secure Socket Shell), allows to securely
 <span class="notesBlockquote">&gt; </span>connect to a remote computer or a server by using a text based
-<span class="notesBlockquote">&gt; </span>interface.
-<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">OpenSSH</span><span class="notesDelimiter">**</span> is an open source implementation of the protocol, it
-<span class="notesBlockquote">&gt; </span>works with a client 'SSH' and a server 'sshd'.
+<span class="notesBlockquote">&gt; </span>interface.  <span class="notesDelimiter">**</span><span class="notesBold">OpenSSH</span><span class="notesDelimiter">**</span> is an open source implementation of the
+<span class="notesBlockquote">&gt; </span>protocol, it works with a client (SSH) and a server (sshd).
 
-Install SSH Daemon:
+Install package:
 <span class="notesCode">    $ sudo apt update</span>
 <span class="notesCode">    $ sudo apt install openssh-server</span>
-
-Check that the SSH service is running:
+Check that SSH is active and enabled:
 <span class="notesCode">    $ sudo service ssh status</span>
 
-Change SSH default port from '22' to '4242':
+Change default port:
 <span class="notesCode">    $ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak</span>
 <span class="notesCode">    $ sudo vi /etc/ssh/sshd_config</span>
-<span class="notesCode">    - #Port 22</span>
-<span class="notesCode">    + Port 4242</span>
-<span class="notesCode">    - #PermitRootLogin prohibit-password</span>
-<span class="notesCode">    + PermitRootLogin no</span>
+<span class="notesCode">    &gt; Port 4242</span>
+<span class="notesCode">    &gt; PermitRootLogin no</span>
 
-Add firewall exceptions:
+Set a firewall exceptions to port 4242:
 <span class="notesCode">    $ sudo ufw allow 4242/tcp</span>
-<span class="notesCode">    $ sudo ufw reload</span>
+Check firewall exceptions:
+<span class="notesCode">    $ sudo ufw status</span>
+
+Restart the service:
 <span class="notesCode">    $ sudo service ssh restart</span>
 
 <span class="notesH1">###     SSH Connection</span>
 
-Open the VM ports:
+Port forwarding:
 MyVM -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Network</span><span class="notesDelimiter">`</span>
  Attached to: <span class="notesDelimiter">`</span><span class="notesCode">NAT</span><span class="notesDelimiter">`</span>
  -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Advanced</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Port Forwarding</span><span class="notesDelimiter">`</span>
  -&gt;(+) Name:<span class="notesDelimiter">`</span><span class="notesCode">SSH</span><span class="notesDelimiter">`</span>| Host Port:<span class="notesDelimiter">`</span><span class="notesCode">4242</span><span class="notesDelimiter">`</span>| Guest Port:<span class="notesDelimiter">`</span><span class="notesCode">4242</span><span class="notesDelimiter">`</span>
 
-Check the Port 4242 host NAT:
-<span class="notesCode">    $ sudo ss -an | grep 4242</span>
+Check port 4242 tcp connection:
+<span class="notesCode">    $ sudo ss -nat | grep 4242</span>
 
 Connect to guest from host:
 <span class="notesCode">    $ ssh -p 4242 cvidon@127.0.0.1</span>
 
+<span class="notesBlockquote">&gt; </span>A good practice is to disable password and only allow connections
+<span class="notesBlockquote">&gt; </span>that come with a trusted public key.
+
 SFTP (Secure File Transfer Protocol):
+
 Connect to guest from host:
 <span class="notesCode">    $ sftp -P 4242 cvidon@127.0.0.1</span>
 Put, get, rm a file:
-<span class="notesCode">    sftp&gt; put &lt;filename&gt;</span>
-<span class="notesCode">    sftp&gt; get &lt;filename&gt;</span>
-<span class="notesCode">    sftp&gt; rm  &lt;filename&gt;</span>
+<span class="notesCode">    sftp&gt; put &lt;file&gt;</span>
+<span class="notesCode">    sftp&gt; get &lt;file&gt;</span>
+<span class="notesCode">    sftp&gt; rm  &lt;file&gt;</span>
 
 <span class="notesH1">###     Password Policy</span>
 
-<span class="notesListMarker">*</span> Install password quality checking library:
+Install package:
 <span class="notesCode">    $ sudo apt install libpam-pwquality</span>
 
-<span class="notesListMarker">*</span> Configure a strong password policy:
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">pam_pwquality</span><span class="notesDelimiter">**</span> provides common functions for password quality
+<span class="notesBlockquote">&gt; </span>checking, scoring them on their apparent randomness.
+
+Configure password policy:
 <span class="notesCode">    $ sudo cp /etc/pam.d/common-password /etc/pam.d/common-password.bak</span>
 <span class="notesCode">    $ sudo vi /etc/pam.d/common-password</span>
 
-<span class="notesListMarker">*</span> At the end of the line matching <span class="notesDelimiter">`</span><span class="notesCode">requisite  pam_pwquality.so</span><span class="notesDelimiter">`</span>
-  after <span class="notesDelimiter">`</span><span class="notesCode">retry=3</span><span class="notesDelimiter">`</span> (space separated, on the same line) add:
-<span class="notesBlockquote">&gt; </span>10 chars long minimum. At least 1 special char and 1 lcase.
-<span class="notesCode">    + minlen=10 ocredit=-1 lcredit=-1</span>
-<span class="notesBlockquote">&gt; </span>At least 1 ucase, 1 number and 3 consecutive identical chars max.
-<span class="notesCode">    + ucredit=-1 dcredit=-1 maxrepeat=3</span>
-<span class="notesBlockquote">&gt; </span>Shouldn't include the username.
-<span class="notesCode">    + reject_username</span>
-<span class="notesBlockquote">&gt; </span>At least 7 chars that are not part of the former password.
-<span class="notesCode">    + difok=7</span>
-<span class="notesBlockquote">&gt; </span>Previous rules apply to root.
-<span class="notesCode">    + enforce_for_root</span>
+At the end of the line matching 'requisite  pam_pwquality.so' after
+'retry=3' and space separated, add:
+<span class="notesCode">    &gt; minlen=10</span>
+<span class="notesCode">      ocredit=-1 lcredit=-1 ucredit=-1 dcredit=-1</span>
+<span class="notesCode">      maxrepeat=3</span>
+<span class="notesCode">      reject_username</span>
+<span class="notesCode">      difok=7</span>
+<span class="notesCode">      enforce_for_root</span>
 
-<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">pam_pwquality</span><span class="notesDelimiter">**</span>: <span class="notesDelimiter">`</span><span class="notesCode">-N</span><span class="notesDelimiter">`</span> means 'minimum of N' and <span class="notesDelimiter">`</span><span class="notesCode">+N</span><span class="notesDelimiter">`</span> means 'maximum
-<span class="notesBlockquote">&gt; </span>of N'. Also <span class="notesDelimiter">`</span><span class="notesCode">enforce_for_root</span><span class="notesDelimiter">`</span>won't apply to <span class="notesDelimiter">`</span><span class="notesCode">difok</span><span class="notesDelimiter">`</span> because &quot;root
-<span class="notesBlockquote">&gt; </span>is not asked for an old password so the checks that compare the old
-<span class="notesBlockquote">&gt; </span>and new password are not performed.&quot;
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">Strong password policy</span><span class="notesDelimiter">**</span>:
+<span class="notesBlockquote">&gt; </span>- 10 chars long minimum.
+<span class="notesBlockquote">&gt; </span>- At least 1 special char, 1 lower case, 1 upper case, 1 number.
+<span class="notesBlockquote">&gt; </span>- Not more than 3 consecutive identical chars.
+<span class="notesBlockquote">&gt; </span>- Doesn't include username.
+<span class="notesBlockquote">&gt; </span>- Doesn't include more than 7 chars from the former password
+<span class="notesBlockquote">&gt; </span>(can't apply to root because its former password aren't preserved)
+<span class="notesBlockquote">&gt; </span>- Previous rules apply to all users and root.
 
-<span class="notesListMarker">*</span> Configure password expiration:
-<span class="notesCode">    # cp /etc/login.defs /etc/login.defs.bak</span>
-<span class="notesCode">    # vi /etc/login.defs</span>
+Configure password expiration:
+<span class="notesCode">    $ sudo cp /etc/login.defs /etc/login.defs.bak</span>
+<span class="notesCode">    $ sudo vi /etc/login.defs</span>
 <span class="notesCode">    &gt; PASS_MAX_DAYS 30</span>
 <span class="notesCode">    &gt; PASS_MIN_DAYS 2</span>
 <span class="notesCode">    &gt; PASS_WARN_AGE 7</span>
 <span class="notesBlockquote">&gt; </span>Expire every 30 days.
-<span class="notesBlockquote">&gt; </span>2 days minimum between the modifications of a password
-<span class="notesBlockquote">&gt; </span>Warning message 7 days before password expire.
+<span class="notesBlockquote">&gt; </span>At least 2 days between two password modifications.
+<span class="notesBlockquote">&gt; </span>Notify 7 days before a password expiration.
 
 Apply this parameters to existing users:
 PASS_MIN_DAYS 2:
@@ -474,57 +461,55 @@ PASS_MAX_DAYS 30:
 PASS_WARN_AGE 7:
 <span class="notesCode">    $ sudo chage --warndays 7 &lt;user&gt;</span>
 
-Check the password policy:
+Check password policy:
 <span class="notesCode">    $ chage -l &lt;user&gt;</span>
 
 <span class="notesH1">###     Update Passwords</span>
 
-<span class="notesListMarker">*</span> Change disk password:
+Change LUKS passphrase:
 Find UUID of the drive:
 <span class="notesCode">    $ cat /etc/crypttab</span>
-Find the ID of the drive:
+Find ID of the drive:
 <span class="notesCode">    $ sudo blkid | grep &lt;some_UUID_chars&gt; | cut -d : -f 1</span>
 Add a passphrase:
 <span class="notesCode">    $ sudo cryptsetup luksAddKey &lt;ID&gt;</span>
 Remove a passphrase:
 <span class="notesCode">    $ sudo cryptsetup luksRemoveKey &lt;ID&gt;</span>
+<span class="notesBlockquote">&gt; </span>Be <span class="notesDelimiter">*</span><span class="notesItalic">careful</span><span class="notesDelimiter">*</span> to keep at least one passphrase before removing the
+<span class="notesBlockquote">&gt; </span>last one.
 
-<span class="notesBlockquote">&gt; </span>It is <span class="notesDelimiter">*</span><span class="notesItalic">important</span><span class="notesDelimiter">*</span> keep at least one passphrase before removing last
-<span class="notesBlockquote">&gt; </span>one.
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">LUKS</span><span class="notesDelimiter">**</span> (Linux Unified Key Setup) is a disk encryption standard.
 
 Change users password:
 <span class="notesCode">    $ sudo passwd &lt;user&gt;</span>
 
 <span class="notesH1">###     Groups and Users</span>
 
-<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">usermod</span><span class="notesDelimiter">**</span> modifies or changes any attributes of an 'already
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">$ usermod</span><span class="notesDelimiter">**</span> modifies or changes any attributes of an 'already
 <span class="notesBlockquote">&gt; </span>existing' user.  (unlike <span class="notesDelimiter">`</span><span class="notesCode">adduser</span><span class="notesDelimiter">`</span> used to 'create' an user account)
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">`</span><span class="notesCode">-G</span><span class="notesDelimiter">`</span> specifies the list of supplementary groups,<span class="notesDelimiter">`</span><span class="notesCode">-a</span><span class="notesDelimiter">`</span> to 'append'
 <span class="notesBlockquote">&gt; </span>instead of 'replaces' the user's group with the supplementary ones.
 
-<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">getent</span><span class="notesDelimiter">**</span> get a databases text file entries (ie. <span class="notesDelimiter">`</span><span class="notesCode">group</span><span class="notesDelimiter">`</span> database's
-<span class="notesBlockquote">&gt; </span>entries <span class="notesDelimiter">`</span><span class="notesCode">sudo</span><span class="notesDelimiter">`</span> and <span class="notesDelimiter">`</span><span class="notesCode">user</span><span class="notesDelimiter">`</span>).
-
-<span class="notesListMarker">*</span> Create 'user42' group:
-<span class="notesCode">    $ sudo groupadd user42</span>
-Check if the group is created:
-<span class="notesCode">    $ sudo getent group user42</span>
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">$ getent</span><span class="notesDelimiter">**</span> get a databases text file entries (ie. <span class="notesDelimiter">`</span><span class="notesCode">group</span><span class="notesDelimiter">`</span>
+<span class="notesBlockquote">&gt; </span>database's entries for <span class="notesDelimiter">`</span><span class="notesCode">user</span><span class="notesDelimiter">`</span> and <span class="notesDelimiter">`</span><span class="notesCode">sudo</span><span class="notesDelimiter">`</span>).
 
 List users:
 <span class="notesCode">    $ cut -d: -f1 /etc/passwd</span>
 
-<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">'/etc/passwd'</span><span class="notesDelimiter">**</span> columns:
+Create 'user42' group:
+<span class="notesCode">    $ sudo groupadd user42</span>
+Check group creation:
+<span class="notesCode">    $ sudo getent group user42</span>
+
+Set a 'clem' to a 'user42':
+<span class="notesCode">    $ sudo usermod -aG user42 clem</span>
+Check clem's groups:
+<span class="notesCode">    $ sudo groups clem</span>
+
+<span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">/etc/passwd</span><span class="notesDelimiter">**</span> columns:
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">`</span><span class="notesCode">username:password:uid:gid:comment:home_directory:shell_used</span><span class="notesDelimiter">`</span>
 <span class="notesBlockquote">&gt; </span>An 'x' in the password column means that the password is encrypted
 <span class="notesBlockquote">&gt; </span>and to be found in '/etc/shadow'.
-
-<span class="notesListMarker">*</span> Set 'cvidon' groups to 'user42':
-<span class="notesCode">    $ sudo usermod -aG user42 cvidon</span>
-Check 'cvidon' groups:
-<span class="notesCode">    $ sudo groups cvidon</span>
-
-Verify group membership:
-<span class="notesCode">    $ id &lt;user&gt;</span>
 
 Delete &lt;group&gt;:
 <span class="notesCode">    $ delgroup &lt;group&gt;</span>
@@ -533,11 +518,12 @@ Delete &lt;user&gt; (and all its files):
 
 <span class="notesH1">###     Crontab Monitoring</span>
 
-Install 'netstat tools':
+Install package:
 <span class="notesCode">    $ sudo apt update</span>
 <span class="notesCode">    $ sudo apt install net-tools</span>
 
-Create and place 'monitoring.sh' in /usr/local/sbin/:
+Create 'monitoring.sh':
+<span class="notesCode">    $ sudo vi /usr/local/sbin/monitoring.sh</span>
 <span class="notesCode">    + #!/bin/bash</span>
 <span class="notesCode">    + arc=$(uname -a)</span>
 <span class="notesCode">    + pcpu=$(grep &quot;physical id&quot; /proc/cpuinfo | sort | uniq | wc -l)</span>
@@ -575,16 +561,17 @@ Create and place 'monitoring.sh' in /usr/local/sbin/:
 <span class="notesCode">    +     $ sudoNetwork: IP $ip ($mac)</span>
 <span class="notesCode">    +     $ sudoSudo: $cmds cmd&quot;</span>
 
-Check the script output:
+Check script output:
 <span class="notesCode">    $ bash /usr/local/sbin/monitoring.sh</span>
-Open crontab and add the rule (that will be executed as root):
+Configure a root cronjob that run the script every 10min:
 <span class="notesCode">    $ sudo crontab -u root -e</span>
 <span class="notesCode">    + */10 * * * * bash /usr/local/sbin/monitoring.sh | wall</span>
 <span class="notesUrl"><a href="https://crontab.guru/#*/10_*_*_*_*/">https://crontab.guru/#*/10_*_*_*_*/</a></span>
 
-Check Cron service status:
+Configure a cronjob:
+Check service status:
 <span class="notesCode">    $ sudo systemctl status cron</span>
-Check that a silent script executes:
+Check script executions:
 <span class="notesCode">    $ sudo grep -a &quot;monitoring.sh&quot; /var/log/syslog</span>
 
 <span class="notesH1">##  LLMP</span>
@@ -593,40 +580,40 @@ Check that a silent script executes:
 
 <span class="notesH1">###     Lighttpd</span>
 
-Install 'Lighttpd' web server:
+Install package:
 <span class="notesCode">    $ sudo apt install lighttpd</span>
-Check that Lighttpd is active and enabled:
-<span class="notesCode">    $ sudo systemctl status lighttpd | grep -o &quot;active\|; enabled;&quot;</span>
+Check that Lighty is active and enabled:
+<span class="notesCode">    $ sudo systemctl status lighttpd</span>
 
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">Lighttpd</span><span class="notesDelimiter">**</span> (pronounced lighty) is a fast, secure, flexible and
 <span class="notesBlockquote">&gt; </span>open source web server optimized for high performance environments.
 <span class="notesBlockquote">&gt; </span>Suited to handle loads of traffic with minimal memory consumption.
 
-Add firewall exceptions to <span class="notesDelimiter">*</span><span class="notesItalic">tcp</span><span class="notesDelimiter">*</span> port 80:
+Set a firewall exceptions to port 80:
 <span class="notesCode">    $ sudo ufw allow 80/tcp</span>
 Check firewall exceptions:
 <span class="notesCode">    $ sudo ufw status</span>
 
-<span class="notesListMarker">*</span> Check Lighttpd welcome page from the host web browser:
+Check Lighttpd welcome page from the host web browser:
 
-Open the VM ports:
+Port forwarding:
 MyVM -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Network</span><span class="notesDelimiter">`</span>
  Attached to: <span class="notesDelimiter">`</span><span class="notesCode">NAT</span><span class="notesDelimiter">`</span>
  -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Advanced</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Port Forwarding</span><span class="notesDelimiter">`</span>
  -&gt;(+) Name:<span class="notesDelimiter">`</span><span class="notesCode">WWW</span><span class="notesDelimiter">`</span>| Host Port:<span class="notesDelimiter">`</span><span class="notesCode">80</span><span class="notesDelimiter">`</span>| Guest Port:<span class="notesDelimiter">`</span><span class="notesCode">80</span><span class="notesDelimiter">`</span>
 
-Check the Port 80 host NAT:
-<span class="notesCode">    $ sudo ss -an | grep 80</span>
+Check that port 80 is open:
+<span class="notesCode">    $ sudo ss -nat | grep 80</span>
 
 Visit Lighttpd welcome page at the address 127.0.0.1
 from the host web browser.
 
 <span class="notesH1">###     MariaDB</span>
 
-Install 'MariaDB':
+Install package:
 <span class="notesCode">    $ sudo apt install mariadb-server</span>
 Check that MariaDB is active and enabled:
-<span class="notesCode">    $ sudo systemctl status mariadb | grep -o &quot;active\|; enabled;&quot;</span>
+<span class="notesCode">    $ sudo systemctl status mariadb</span>
 
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">MariaDB</span><span class="notesDelimiter">**</span> is a DBMS (Relational Database Management System) that
 <span class="notesBlockquote">&gt; </span>is a fork and an alternative to MySQL (that uses some proprietary
@@ -671,7 +658,7 @@ Exit MariaDB shell: <span class="notesDelimiter">`</span><span class="notesCode"
 
 <span class="notesH1">###     PHP</span>
 
-Install php and php-mysql
+Install packages:
 <span class="notesCode">    $ sudo apt install php-cgi php-mysql</span>
 
 <span class="notesBlockquote">&gt; </span><span class="notesDelimiter">**</span><span class="notesBold">php-mysql</span><span class="notesDelimiter">**</span> package provides SQL modules for PHP.
@@ -708,18 +695,16 @@ Restart server:
 
 <span class="notesH1">###     WP</span>
 
-Download WP to '/var/www/html'
+Download WP to /var/www/html:
 <span class="notesCode">    $ sudo wget </span><span class="notesUrl"><a href="http://wordpress.org/latest.tar.gz">http://wordpress.org/latest.tar.gz</a></span>
-Extract content:
+Extract and install content:
 <span class="notesCode">    $ sudo tar xzvf latest.tar.gz</span>
-Copy content of '/var/www/html/wordpress' to '/var/www/html':
 <span class="notesCode">    $ sudo cp -r wordpress/* /var/www/html</span>
-Remove 'latest.tar.gz' and 'wordpress':
+Cleanup:
 <span class="notesCode">    $ sudo rm -rf latest.tar.gz wordpress</span>
 
-Create WP config file:
+Reference 'clem_db' and 'clem' into WP config:
 <span class="notesCode">    $ sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php</span>
-Reference 'clem_db' and 'clem' into config:
 <span class="notesCode">    $ sudo vi /var/www/html/wp-config.php</span>
 <span class="notesCode">    &gt; define( 'DB_NAME', 'clem_db' );</span>
 <span class="notesCode">    &gt; define( 'DB_USER', 'clem' );</span>
@@ -731,10 +716,11 @@ Visit localhost from the host web browser to see the WP default page.
 
 Download GO:
 <span class="notesCode">    $ curl -O </span><span class="notesUrl"><a href="https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz">https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz</a></span>
+Check the hash:
 <span class="notesCode">    $ sha256sum go1.17.5.linux-amd64.tar.gz</span>
-Compare with the online hash: <span class="notesUrl"><a href="https://go.dev/dl/">https://go.dev/dl/</a></span>
+<span class="notesCode">    </span><span class="notesUrl"><a href="https://go.dev/dl/">https://go.dev/dl/</a></span>
 
-Extract to '/usr/local':
+Install:
 <span class="notesCode">    $ sudo tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz</span>
 
 Update zsh env:
@@ -744,16 +730,15 @@ Update zsh env:
 Source zprofile:
 <span class="notesCode">    $ source ~/.zprofile</span>
 
-Check that GO is installed:
+Check installation:
 <span class="notesCode">    $ go version</span>
 
 Download IPFS:
 <span class="notesCode">    $ go install github.com/ipfs/ipfs-update@latest</span>
-
-Check that IPFS is up to date:
+Check updates:
 <span class="notesCode">    $ ipfs-update versions</span>
-Update to whatever version is the latest:
-<span class="notesCode">    $ ipfs-update install v0.11.0</span>
+Update to the latest version:
+<span class="notesCode">    $ ipfs-update install v?.??.?</span>
 
 Increase maximum buffer size (from 300k to to 2500k):
 <span class="notesCode">    $ sudo sysctl -w net.core.rmem_max=2500000</span>
@@ -763,7 +748,7 @@ Initialize IPFS:
 Change IPFS repo size (default 10GB):
 <span class="notesCode">    $ ipfs config Datastore.StorageMax 50MB</span>
 
-Create a systemd service to make sure IPFS is running all the time:
+Create a service to make sure IPFS is running all the time:
 <span class="notesCode">    $ sudo vi /etc/systemd/system/ipfs.service</span>
 <span class="notesCode">    &gt; [Unit]</span>
 <span class="notesCode">    &gt; Description=IPFS Daemon</span>
@@ -776,26 +761,26 @@ Create a systemd service to make sure IPFS is running all the time:
 <span class="notesCode">    &gt; [Install]</span>
 <span class="notesCode">    &gt; WantedBy=multi-user.target</span>
 
-Enable IPFS service:
+Start and enable IPFS service:
 <span class="notesCode">    $ sudo systemctl daemon-reload</span>
 <span class="notesCode">    $ sudo systemctl enable ipfs</span>
 <span class="notesCode">    $ sudo systemctl start ipfs</span>
-Check:
-<span class="notesCode">    $ sudo systemctl status ipfs | grep -o &quot;active\|; enabled;&quot;</span>
+Check that IPFS is active and enabled:
+<span class="notesCode">    $ sudo systemctl status ipfs</span>
 
-Add firewall exceptions to <span class="notesDelimiter">*</span><span class="notesItalic">tcp</span><span class="notesDelimiter">*</span> port 4001:
+Set a firewall exceptions to port 4001:
 <span class="notesCode">    $ sudo ufw allow 4001/tcp</span>
 Check firewall exceptions:
 <span class="notesCode">    $ sudo ufw status</span>
 
-Open the VM ports:
+Port forwarding:
 MyVM -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Settings</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Network</span><span class="notesDelimiter">`</span>
  Attached to: <span class="notesDelimiter">`</span><span class="notesCode">NAT</span><span class="notesDelimiter">`</span>
  -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Advanced</span><span class="notesDelimiter">`</span> -&gt;<span class="notesDelimiter">`</span><span class="notesCode">Port Forwarding</span><span class="notesDelimiter">`</span>
  -&gt;(+) Name:<span class="notesDelimiter">`</span><span class="notesCode">IPFS</span><span class="notesDelimiter">`</span>| Host Port:<span class="notesDelimiter">`</span><span class="notesCode">4001</span><span class="notesDelimiter">`</span>| Guest Port:<span class="notesDelimiter">`</span><span class="notesCode">4001</span><span class="notesDelimiter">`</span>
 
-Check the Port 4001 host NAT:
-<span class="notesCode">    $ sudo netstat -an | grep 4001</span>
+Check port 4001 tcp connection:
+<span class="notesCode">    $ sudo ss -nat | grep 4001</span>
 
 <span class="notesUrl"><a href="https://docs.ipfs.io/how-to/observe-peers/">https://docs.ipfs.io/how-to/observe-peers/</a></span>
 See whose peer we are directly connected to:
