@@ -6,4 +6,4 @@ Install a Debian server on a virtual machine with VirtualBox and setup an [IPFS]
 <br/>
 <br/>
 
-*Please **DO NOT** copy paste this with **NULL** in your eyes and **UNDEFINED** in your head!*
+*Please **DO NOT** copy paste this with **UNDEFINED** in your eyes and **NULL** in your head.*
