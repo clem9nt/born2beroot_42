@@ -191,12 +191,12 @@ Set the rest as <span class="notesItalic">logical partition</span>:
 <span class="notesBlockquote">&gt; </span>Portion of a computer's hardware that is set aside and virtualised
 <span class="notesBlockquote">&gt; </span>as an additional computer.
  -&gt;<span class="notesCode">FREE SPACE</span> -&gt;<span class="notesCode">Create a new partition</span>
- New partition size: <span class="notesCode">max</span> -&gt;<span class="notesCode">Logical</span> -&gt;<span class="notesCode">Beginning</span>
+ New partition size: <span class="notesCode">max</span> -&gt;<span class="notesCode">Logical</span>
  Mount point: <span class="notesCode">Do not mount it</span> -&gt;<span class="notesCode">Done setting up the partition</span>
 
 Encrypt it:
  -&gt;<span class="notesCode">Configure encrypted volumes</span> -&gt;<span class="notesCode">Create encrypted volumes</span>
- -&gt; 2nd partition (the bigger one) -&gt;<span class="notesCode">Done setting up the partition</span>
+ -&gt; 2nd partition (the bigger one) -&gt;<span class="notesCode">Continue</span>
  -&gt;<span class="notesCode">Finish</span>
  Encryption passphrase: <span class="notesCode">ksid</span>
 
@@ -238,7 +238,7 @@ Create the logical partitions:
  -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">Ext4</span> -&gt;<span class="notesCode">Mount point</span> -&gt;<span class="notesCode">home</span>
  -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">Ext4</span> -&gt;<span class="notesCode">Mount point</span> -&gt;<span class="notesCode">/</span>
  -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">Ext4</span> -&gt;<span class="notesCode">Mount point</span> -&gt;<span class="notesCode">srv</span>
- -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">swap</span> -&gt;<span class="notesCode">Mount point</span> -&gt;<span class="notesCode">swap</span>
+ -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">swap</span> -&gt;<span class="notesCode">swap</span>
  -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">Ext4</span> -&gt;<span class="notesCode">Mount point</span> -&gt;<span class="notesCode">tmp</span>
  -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">Ext4</span> -&gt;<span class="notesCode">Mount point</span> -&gt;<span class="notesCode">var</span>
  -&gt;<span class="notesCode">#1</span> -&gt;<span class="notesCode">Use as:…</span> -&gt;<span class="notesCode">Ext4</span> -&gt;<span class="notesCode">Moun…</span> -&gt;<span class="notesCode">Enter Manually</span>-&gt;<span class="notesCode">/var/log</span>
@@ -547,17 +547,17 @@ Create 'monitoring.sh':
 <span class="notesCode">    + cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)</span>
 <span class="notesCode">    +</span>
 <span class="notesCode">    + echo &quot;  #Architecture: $arc</span>
-<span class="notesCode">    +     $ sudoCPU physical: $pcpu</span>
-<span class="notesCode">    +     $ sudovCPU: $vcpu</span>
-<span class="notesCode">    +     $ sudoMemory Usage: $uram/${fram}MB ($pram%)</span>
-<span class="notesCode">    +     $ sudoDisk Usage: $udisk/${fdisk}Gb ($pdisk%)</span>
-<span class="notesCode">    +     $ sudoCPU load: $cpul</span>
-<span class="notesCode">    +     $ sudoLast boot: $lb</span>
-<span class="notesCode">    +     $ sudoLVM use: $lvmu</span>
-<span class="notesCode">    +     $ sudoConnexions TCP : $ctcp ESTABLISHED</span>
-<span class="notesCode">    +     $ sudoUser log: $ulog</span>
-<span class="notesCode">    +     $ sudoNetwork: IP $ip ($mac)</span>
-<span class="notesCode">    +     $ sudoSudo: $cmds cmd&quot;</span>
+<span class="notesCode">    +     #CPU physical: $pcpu</span>
+<span class="notesCode">    +     #vCPU: $vcpu</span>
+<span class="notesCode">    +     #Memory Usage: $uram/${fram}MB ($pram%)</span>
+<span class="notesCode">    +     #Disk Usage: $udisk/${fdisk}Gb ($pdisk%)</span>
+<span class="notesCode">    +     #CPU load: $cpul</span>
+<span class="notesCode">    +     #Last boot: $lb</span>
+<span class="notesCode">    +     #LVM use: $lvmu</span>
+<span class="notesCode">    +     #Connexions TCP : $ctcp ESTABLISHED</span>
+<span class="notesCode">    +     #User log: $ulog</span>
+<span class="notesCode">    +     #Network: IP $ip ($mac)</span>
+<span class="notesCode">    +     #Sudo: $cmds cmd&quot;</span>
 
 Check script output:
 <span class="notesCode">    $ bash /usr/local/sbin/monitoring.sh</span>
